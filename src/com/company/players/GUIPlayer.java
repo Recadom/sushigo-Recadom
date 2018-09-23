@@ -56,6 +56,7 @@ public class GUIPlayer implements Player {
 
     @Override
     public String getName() {
-        return "Jason Yamel";
+        return playerName;
+        //return "Jason Yamel";
     }
 }

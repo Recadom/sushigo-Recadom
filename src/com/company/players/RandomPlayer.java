@@ -5,6 +5,7 @@ import com.company.GraphicsEngine;
 import com.company.Player;
 import com.company.TurnResult;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -12,9 +13,9 @@ public class RandomPlayer implements Player {
     private GraphicsEngine graphicsEngine;
     private String playerName;
     private List<String> allPlayerNames;
-
-
     private List<CardType> cards;
+
+
     /**
      * Called once the player object has been instantiated. This gives the player object the names of all the
      * other players in the game. The allNames list should be ordered so that, for example, the player
@@ -40,7 +41,8 @@ public class RandomPlayer implements Player {
      * @param cards List of cards that represent the player's hand for this turn.
      */
     public void receiveHand(List<CardType> cards) {
-        graphicsEngine.giveHand(cards);
+        this.cards = cards;
+        //graphicsEngine.giveHand(cards);
     }
 
     /**
@@ -51,7 +53,10 @@ public class RandomPlayer implements Player {
      * @return CardType(s) that player wishes to take from the hand. The size of this list should be one or two.
      */
     public List<CardType> giveCardsPlayed() {
-        return graphicsEngine.getCardsPlayed();
+        //return graphicsEngine.getCardsPlayed();
+        List<CardType> cardsPlayed = new ArrayList<>();
+        cardsPlayed.add(cards.get(0));
+        return cardsPlayed;
     }
 
     /**
@@ -60,8 +65,8 @@ public class RandomPlayer implements Player {
      * @param pointMap Map of player names to points at the end of the round.
      */
     public void endRound(Map<String, Integer> pointMap) {
-        graphicsEngine.clearTable();
-        graphicsEngine.setPoints(pointMap);
+        //graphicsEngine.clearTable();
+        //graphicsEngine.setPoints(pointMap);
     }
 
     /**
@@ -70,7 +75,7 @@ public class RandomPlayer implements Player {
      * @param turnResults List of the turn results containing the actions of each player during that turn.
      */
     public void receiveTurnResults(List<TurnResult> turnResults) {
-        graphicsEngine.setTable(turnResults);
+        //graphicsEngine.setTable(turnResults);
     }
 
     /**
@@ -79,7 +84,7 @@ public class RandomPlayer implements Player {
      * @param pointMap Map of player names to points at the end of the game.
      */
     public void endGame(Map<String, Integer> pointMap) {
-        graphicsEngine.endGame(pointMap);
+        //graphicsEngine.endGame(pointMap);
     }
 
     /**
