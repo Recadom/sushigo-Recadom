@@ -1,13 +1,13 @@
 package com.company;
 
-import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Stack;
 
 public class CardDeck {
-    private ArrayList<CardType> cards;
+    private Stack<CardType> cards;
 
     public CardDeck() {
-        this.cards = new ArrayList<CardType>();
+        this.cards = new Stack<CardType>();
 
         addCard(CardType.Tempura, 14);
         addCard(CardType.Sashimi, 14);
@@ -21,21 +21,19 @@ public class CardDeck {
         addCard(CardType.Pudding, 10);
         addCard(CardType.Wasabi, 6);
         addCard(CardType.Chopsticks, 4);
-
-        shuffle();
     }
 
     private void addCard(CardType name, int amt) {
         for (int i = 0; i < amt; i++) {
-            this.cards.add(name);
+            this.cards.push(name);
         }
     }
 
-    private void shuffle(){
+    public void shuffle(){
         Collections.shuffle(this.cards);
     }
 
     public CardType takeCard() {
-        return cards.remove(cards.size()-1);
+        return cards.pop();
     }
 }
