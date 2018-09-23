@@ -12,6 +12,9 @@ public class RandomPlayer implements Player {
     private GraphicsEngine graphicsEngine;
     private String playerName;
     private List<String> allPlayerNames;
+
+
+    private List<CardType> cards;
     /**
      * Called once the player object has been instantiated. This gives the player object the names of all the
      * other players in the game. The allNames list should be ordered so that, for example, the player
@@ -29,7 +32,7 @@ public class RandomPlayer implements Player {
      * Called at the start of every new game.
      */
     public void newGame() {
-        graphicsEngine = new GraphicsEngine(playerName, allPlayerNames);
+        //graphicsEngine = new GraphicsEngine(playerName, allPlayerNames);
     }
 
     /**
