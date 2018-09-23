@@ -16,6 +16,6 @@ public class Main {
         playerList.add(new GUIPlayer()); // Having a single GUIPlayer will play the game with a GUI
 
         GameEngine gameEngine = new GameEngine(playerList);
-        gameEngine.playGame(1);
+        gameEngine.playGame();
     }
 }

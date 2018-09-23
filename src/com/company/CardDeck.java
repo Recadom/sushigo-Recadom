@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class CardDeck {
-    private ArrayList<Card> cards;
+    private ArrayList<CardType> cards;
 
     public CardDeck() {
-        this.cards = new ArrayList<Card>();
+        this.cards = new ArrayList<CardType>();
 
         addCard(CardType.Tempura, 14);
         addCard(CardType.Sashimi, 14);
@@ -27,11 +27,15 @@ public class CardDeck {
 
     private void addCard(CardType name, int amt) {
         for (int i = 0; i < amt; i++) {
-            this.cards.add(new Card(name));
+            this.cards.add(name);
         }
     }
 
     private void shuffle(){
         Collections.shuffle(this.cards);
+    }
+
+    public CardType takeCard() {
+        return cards.remove(cards.size()-1);
     }
 }
