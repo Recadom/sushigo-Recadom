@@ -13,7 +13,7 @@ import java.util.Map;
 
 public class GameEngine {
     private List<Player> playerList;
-    private List<String> allNames = new ArrayList<>(); //todo reduce scope
+    private List<String> allNames = new ArrayList<>();
     private CardDeck deck = new CardDeck();
     private HashMap<String, List<CardType>> cardsOnTable;
     private Map<String, Integer> pointMap;
@@ -50,7 +50,7 @@ public class GameEngine {
     }
 
     public void playGame(){
-        final int ROUNDS = 3; //TODO change to 3
+        final int ROUNDS = 3;
         deck = new CardDeck();
         deck.shuffle();
         pointMap = new HashMap<>();
@@ -116,12 +116,9 @@ public class GameEngine {
 
                 //todo keep track of puddings
                 //todo end game scoring engine, pass pudding + played cards
-                //tally current score todo make sure this is the correct timing for this
-                pointMap = Scoring.evaluateBoard(pointMap);//, cardsOnTable);
+                //tally current score
+                pointMap = Scoring.evaluateBoard(pointMap, cardsOnTable, allNames);
 
-                /*for (Player player : playerList) {
-                    pointMap.put(player.getName(), 10);
-                }*/
                 playerHand = playerHand.next;
 
             }
