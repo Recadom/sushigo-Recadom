@@ -13,7 +13,7 @@ public class Main {
         playerList.add(new RandomPlayer());
         playerList.add(new RandomPlayer());
         playerList.add(new RandomPlayer());
-        playerList.add(new GUIPlayer()); // Having a single GUIPlayer will play the game with a GUI
+        playerList.add(new GUIPlayer());
 
         GameEngine gameEngine = new GameEngine(playerList);
         gameEngine.playGame();

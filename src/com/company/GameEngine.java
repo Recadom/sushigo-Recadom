@@ -13,10 +13,9 @@ import java.util.Map;
 
 public class GameEngine {
     private List<Player> playerList;
-    private List<String> allNames = new ArrayList<>();
+    private List<String> allNames = new ArrayList<>(); //todo reduce scope
     private CardDeck deck = new CardDeck();
     private ArrayList<List<CardType>> cardsPlayed;
-    private CircularLinkedList playerHands = new CircularLinkedList();
     private Map<String, Integer> pointMap;
     private int cardsPerHand, amountOfPlayers;
 
@@ -54,12 +53,13 @@ public class GameEngine {
         final int ROUNDS = 3; //TODO change to 3
         deck = new CardDeck();
         deck.shuffle();
-        int cardsPlayedCnt = 0;
         pointMap = new HashMap<>();
-        cardsPlayed = new ArrayList<>();
+        CircularLinkedList playerHands;
 
 
-        for(int round = 0; round < ROUNDS; round++) {
+        for (int round = 0; round < ROUNDS; round++) {
+            cardsPlayed = new ArrayList<>();
+            playerHands = new CircularLinkedList();
 
             //deal the initial hands
             for (int i = 0; i < amountOfPlayers; i++) {
@@ -72,13 +72,12 @@ public class GameEngine {
 
 
             //repeat until last card has been played
-            while(cardsPlayedCnt < cardsPerHand * amountOfPlayers) {
+            for(int cardsPlayedCnt = 0; cardsPlayedCnt < cardsPerHand * amountOfPlayers;) {
 
                 List<TurnResult> turnResults = new ArrayList<>();
 
                 //allow each player to take a turn
                 for (int playerNum = 0; playerNum < amountOfPlayers; playerNum++) {
-
                     Player player = playerList.get(playerNum);
 
                     //send each player their cards  //todo make sure proper values are used
@@ -127,7 +126,9 @@ public class GameEngine {
             for (Player player : playerList) {
                 player.endRound(pointMap);
             }
+
         }
+
         //send final scores
         for (Player player : playerList) {
             player.endGame(pointMap);

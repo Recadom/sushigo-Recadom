@@ -8,6 +8,7 @@ import com.company.TurnResult;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 
 public class RandomPlayer implements Player {
     private GraphicsEngine graphicsEngine;
@@ -33,7 +34,6 @@ public class RandomPlayer implements Player {
      * Called at the start of every new game.
      */
     public void newGame() {
-        //graphicsEngine = new GraphicsEngine(playerName, allPlayerNames);
     }
 
     /**
@@ -42,7 +42,6 @@ public class RandomPlayer implements Player {
      */
     public void receiveHand(List<CardType> cards) {
         this.cards = cards;
-        //graphicsEngine.giveHand(cards);
     }
 
     /**
@@ -53,9 +52,14 @@ public class RandomPlayer implements Player {
      * @return CardType(s) that player wishes to take from the hand. The size of this list should be one or two.
      */
     public List<CardType> giveCardsPlayed() {
-        //return graphicsEngine.getCardsPlayed();
+        int index = 0;
+        if (cards.size() > 1) {
+            Random rand = new Random();
+            index = rand.nextInt(cards.size());
+
+        }
         List<CardType> cardsPlayed = new ArrayList<>();
-        cardsPlayed.add(cards.get(0));
+        cardsPlayed.add(cards.get(index));
         return cardsPlayed;
     }
 
@@ -65,8 +69,6 @@ public class RandomPlayer implements Player {
      * @param pointMap Map of player names to points at the end of the round.
      */
     public void endRound(Map<String, Integer> pointMap) {
-        //graphicsEngine.clearTable();
-        //graphicsEngine.setPoints(pointMap);
     }
 
     /**
@@ -75,7 +77,6 @@ public class RandomPlayer implements Player {
      * @param turnResults List of the turn results containing the actions of each player during that turn.
      */
     public void receiveTurnResults(List<TurnResult> turnResults) {
-        //graphicsEngine.setTable(turnResults);
     }
 
     /**
@@ -84,7 +85,6 @@ public class RandomPlayer implements Player {
      * @param pointMap Map of player names to points at the end of the game.
      */
     public void endGame(Map<String, Integer> pointMap) {
-        //graphicsEngine.endGame(pointMap);
     }
 
     /**
