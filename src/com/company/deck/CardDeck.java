@@ -1,4 +1,4 @@
-package com.company;
+package com.company.deck;
 
 import java.util.Collections;
 import java.util.Stack;

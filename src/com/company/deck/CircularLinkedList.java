@@ -1,4 +1,4 @@
-package com.company;
+package com.company.deck;
 
 import java.util.List;
 
@@ -24,10 +24,3 @@ public class CircularLinkedList {
   }
 }
 
-class Node {
-  List<CardType> data;
-  Node next;
-  public Node(List<CardType> data){
-    this.data = data;
-  }
-}

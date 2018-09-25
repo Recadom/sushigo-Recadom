@@ -1,8 +1,8 @@
 package com.company;
 
-import com.company.players.GUIPlayer;
+import com.company.deck.CardDeck;
+import com.company.deck.CardType;
 import com.company.players.RandomPlayer;
-import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;

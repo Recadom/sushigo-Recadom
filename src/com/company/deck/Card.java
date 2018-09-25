@@ -1,4 +1,4 @@
-package com.company;
+package com.company.deck;
 
 public class Card {
     private CardType name;

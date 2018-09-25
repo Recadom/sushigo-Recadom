@@ -1,5 +1,7 @@
 package com.company;
 
+import com.company.deck.CardType;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
