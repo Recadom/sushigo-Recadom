@@ -32,7 +32,7 @@ public class GameEngine {
             player.newGame();
         }
 
-        cardsPerHand = 12 - playerList.size();
+        cardsPerHand = 12 - playerList.size(); //TODO add check for correct num of players
 
     }
 
@@ -64,14 +64,20 @@ public class GameEngine {
                     Player player = playerList.get(playerNum);
                     List<CardType> currentCardPlay = player.giveCardsPlayed(); //TODO add check for ch st & amt of cards
 
-                    cardsPlayed.get(playerNum).add(currentCardPlay.get(0));
-                    System.out.println(currentCardPlay);
-                    cardsPlayedCnt += currentCardPlay.size();
+                    cardsPlayed.get(playerNum).add(currentCardPlay.get(0)); //TODO make this take multiple cards
+                    if (currentCardPlay.size() > 1) {
+                        cardsPlayed.get(playerNum).add(currentCardPlay.get(1));
+                    }
+
+                    //System.out.println(currentCardPlay);
+                    cardsPlayedCnt += currentCardPlay.size(); //TODO may need to change to Tablehand = 8 for chopsticks
 
                     //compile turn data
                     //List<CardType> playerTableHand = new ArrayList<>(); //TODO make this larger scope
-                    TurnResult turn = new TurnResult(player.getName(),currentCardPlay, cardsPlayed.get(playerNum));
-                    turnResults.add(turn);
+                    //System.out.println(cardsPlayed.get(0).toString());
+
+                    //TurnResult turn = new TurnResult(player.getName(),currentCardPlay, cardsPlayed.get(playerNum));
+                    turnResults.add(new TurnResult(player.getName(),currentCardPlay, cardsPlayed.get(playerNum)));
                 }
 
                 //send turn data
@@ -85,12 +91,15 @@ public class GameEngine {
                     pointMap.put(player.getName(), 10);
                 }
 
-                //send scores to each player
-                for (Player player : playerList) {
-                    player.endRound(pointMap);
-                }
+
                 //System.out.println(cardsPlayedCnt);
             }
+
+            //send scores to each player
+            for (Player player : playerList) {
+                player.endRound(pointMap);
+            }
+
             //send final scores
             for (Player player : playerList) {
                 player.endGame(pointMap);
