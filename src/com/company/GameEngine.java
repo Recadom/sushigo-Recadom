@@ -20,7 +20,7 @@ public class GameEngine {
         this.playerList = playerListIn;
 
         //compile names
-        for (int i = 0; i < playerList.size(); i++) {
+        for (int i = 0; i < playerList.size(); i++) { //todo make sure players are aligned correctly
             allNames.add("Player " + (i+1));
         }
 
@@ -51,7 +51,7 @@ public class GameEngine {
 
             //deal the initial hands
             for (Player player : playerList) {
-                List<CardType> cards = generateHand();
+                //List<CardType> cards = generateHand();
                 //player.receiveHand(generateHand());
                 cardsPlayed.add(new ArrayList<CardType>());
                 playerHands.addNode(generateHand());
