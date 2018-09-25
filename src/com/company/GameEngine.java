@@ -17,9 +17,8 @@ public class GameEngine {
     private CardDeck deck = new CardDeck();
     private ArrayList<List<CardType>> cardsPlayed;
     private CircularLinkedList playerHands = new CircularLinkedList();
-
     private Map<String, Integer> pointMap;
-    private int cardsPerHand;
+    private int cardsPerHand, amountOfPlayers;
 
     public GameEngine(List<Player> playerListIn) {
         this.playerList = playerListIn;
@@ -39,7 +38,15 @@ public class GameEngine {
             player.newGame();
         }
 
-        cardsPerHand = 12 - playerList.size(); //TODO add check for correct num of players
+        //set up amount of players and size of hands
+        amountOfPlayers = playerList.size();
+        if (amountOfPlayers > 1 && amountOfPlayers < 6) {
+            cardsPerHand = 12 - amountOfPlayers;
+        } else {
+            System.out.println("Improper amount of players. Defaulting to 4.");
+            cardsPerHand = 8;
+            amountOfPlayers = 4;
+        }
 
     }
 
@@ -52,32 +59,32 @@ public class GameEngine {
         cardsPlayed = new ArrayList<>();
 
 
-        for(int i = 0; i < ROUNDS; i++) {
+        for(int round = 0; round < ROUNDS; round++) {
 
             //deal the initial hands
-            for (Player player : playerList) {
-                //List<CardType> cards = generateHand();
-                //player.receiveHand(generateHand());
-                cardsPlayed.add(new ArrayList<CardType>());
+            for (int i = 0; i < amountOfPlayers; i++) {
+                cardsPlayed.add(new ArrayList<>());
                 playerHands.addNode(generateHand());
             }
 
+            //Point the current hand of cards to the first player
             Node playerHand = playerHands.head;
+
+
             //repeat until last card has been played
-            while(cardsPlayedCnt < cardsPerHand * playerList.size()) {
+            while(cardsPlayedCnt < cardsPerHand * amountOfPlayers) {
+
+                List<TurnResult> turnResults = new ArrayList<>();
 
                 //allow each player to take a turn
-                List<TurnResult> turnResults = new ArrayList<>();
-                for (int playerNum = 0; playerNum < playerList.size(); playerNum++) {            //TODO make .size() a variable
-
+                for (int playerNum = 0; playerNum < amountOfPlayers; playerNum++) {
 
                     Player player = playerList.get(playerNum);
-
 
                     //send each player their cards  //todo make sure proper values are used
                     player.receiveHand(playerHand.data);
 
-
+                    //receive the player's cards to be played
                     List<CardType> currentCardPlay = player.giveCardsPlayed(); //TODO add check for ch st & amt of cards
 
                     //remove cards used from hand
@@ -91,18 +98,12 @@ public class GameEngine {
                         cardsPlayed.get(playerNum).addAll(currentCardPlay);
                     }
 
-
-                    //System.out.println(currentCardPlay);
-                    //cardsPlayedCnt += currentCardPlay.size(); //TODO may need to change to Tablehand = 8 for chopsticks
-
-                    //compile turn data
-                    //List<CardType> playerTableHand = new ArrayList<>(); //TODO make this larger scope
-                    //System.out.println(cardsPlayed.get(0).toString());
-
-                    //TurnResult turn = new TurnResult(player.getName(),currentCardPlay, cardsPlayed.get(playerNum));
                     turnResults.add(new TurnResult(player.getName(),currentCardPlay, cardsPlayed.get(playerNum)));
+
+                    //point the playerHand pointer to the next node; this cycles the player hands
                     playerHand = playerHand.next;
 
+                    //count the cards left on the table
                     cardsPlayedCnt = 0;
                     for(List<CardType> cards : cardsPlayed) {
                         cardsPlayedCnt += cards.size();
@@ -112,7 +113,6 @@ public class GameEngine {
                 //send turn data
                 for (Player recPlayer : playerList) {
                     recPlayer.receiveTurnResults(turnResults);
-                    //System.out.println(turnResults.toString());
                 }
 
                 //tally current score todo make sure this is the correct timing for this
@@ -139,7 +139,6 @@ public class GameEngine {
 
         for(int i = 0; i < cardsPerHand; i++) {
             CardType card = deck.takeCard();
-            //System.out.println(card);
             hand.add(card);
         }
         return hand;

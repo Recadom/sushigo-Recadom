@@ -1,4 +1,5 @@
-package com.company.deck;
+import com.company.deck.CardDeck;
+import com.company.deck.CardType;
 
 import static org.junit.Assert.*;
 
