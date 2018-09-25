@@ -11,6 +11,8 @@ public class GameEngine {
     private List<String> allNames = new ArrayList<>();
     private CardDeck deck = new CardDeck();
     private ArrayList<List<CardType>> cardsPlayed;
+    private CircularLinkedList playerHands = new CircularLinkedList();
+
     private Map<String, Integer> pointMap;
     private int cardsPerHand;
 
@@ -37,7 +39,7 @@ public class GameEngine {
     }
 
     public void playGame(){
-        final int ROUNDS = 1; //TODO change to 3
+        final int ROUNDS = 3; //TODO change to 3
         deck = new CardDeck();
         deck.shuffle();
         int cardsPlayedCnt = 0;
@@ -50,27 +52,43 @@ public class GameEngine {
             //deal the initial hands
             for (Player player : playerList) {
                 List<CardType> cards = generateHand();
-                player.receiveHand(generateHand());
+                //player.receiveHand(generateHand());
                 cardsPlayed.add(new ArrayList<CardType>());
+                playerHands.addNode(generateHand());
             }
 
+            Node playerHand = playerHands.head;
             //repeat until last card has been played
             while(cardsPlayedCnt < cardsPerHand * playerList.size()) {
-                //cardsPlayed = new ArrayList<>();
 
-                //receive cards to play from players
+                //allow each player to take a turn
                 List<TurnResult> turnResults = new ArrayList<>();
                 for (int playerNum = 0; playerNum < playerList.size(); playerNum++) {            //TODO make .size() a variable
+
+
                     Player player = playerList.get(playerNum);
+
+
+                    //send each player their cards  //todo make sure proper values are used
+                    player.receiveHand(playerHand.data);
+
+
                     List<CardType> currentCardPlay = player.giveCardsPlayed(); //TODO add check for ch st & amt of cards
 
-                    cardsPlayed.get(playerNum).add(currentCardPlay.get(0)); //TODO make this take multiple cards
-                    if (currentCardPlay.size() > 1) {
-                        cardsPlayed.get(playerNum).add(currentCardPlay.get(1));
+                    //remove cards used from hand
+                    playerHand.data.remove(currentCardPlay.get(0));
+                    if(currentCardPlay.size() > 1) {
+                        playerHand.data.remove(currentCardPlay.get(1));
                     }
 
+                    //add cards to table
+                    if (currentCardPlay.size() == 1 || currentCardPlay.size() == 2) {
+                        cardsPlayed.get(playerNum).addAll(currentCardPlay);
+                    }
+
+
                     //System.out.println(currentCardPlay);
-                    cardsPlayedCnt += currentCardPlay.size(); //TODO may need to change to Tablehand = 8 for chopsticks
+                    //cardsPlayedCnt += currentCardPlay.size(); //TODO may need to change to Tablehand = 8 for chopsticks
 
                     //compile turn data
                     //List<CardType> playerTableHand = new ArrayList<>(); //TODO make this larger scope
@@ -78,6 +96,12 @@ public class GameEngine {
 
                     //TurnResult turn = new TurnResult(player.getName(),currentCardPlay, cardsPlayed.get(playerNum));
                     turnResults.add(new TurnResult(player.getName(),currentCardPlay, cardsPlayed.get(playerNum)));
+                    playerHand = playerHand.next;
+
+                    cardsPlayedCnt = 0;
+                    for(List<CardType> cards : cardsPlayed) {
+                        cardsPlayedCnt += cards.size();
+                    }
                 }
 
                 //send turn data
@@ -86,25 +110,22 @@ public class GameEngine {
                     //System.out.println(turnResults.toString());
                 }
 
-                //tally current score
+                //tally current score todo make sure this is the correct timing for this
                 for (Player player : playerList) {
                     pointMap.put(player.getName(), 10);
                 }
+                playerHand = playerHand.next;
 
-
-                //System.out.println(cardsPlayedCnt);
             }
 
             //send scores to each player
             for (Player player : playerList) {
                 player.endRound(pointMap);
             }
-
-            //send final scores
-            for (Player player : playerList) {
-                player.endGame(pointMap);
-            }
-
+        }
+        //send final scores
+        for (Player player : playerList) {
+            player.endGame(pointMap);
         }
     }
 
