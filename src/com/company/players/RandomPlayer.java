@@ -59,6 +59,9 @@ public class RandomPlayer implements Player {
 
         }
         List<CardType> cardsPlayed = new ArrayList<>();
+        if (cards.size() == 0) {
+            return null;
+        }
         cardsPlayed.add(cards.get(index));
         return cardsPlayed;
     }
