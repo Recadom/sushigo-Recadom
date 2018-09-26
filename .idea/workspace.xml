@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="74e08c6c-515f-46d2-900d-aaec62aae178" name="Default" comment="deleted completed TODOs">
+    <list default="true" id="74e08c6c-515f-46d2-900d-aaec62aae178" name="Default" comment="added pudding and chopstick functions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/GameEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/GameEngine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Scoring.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Scoring.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/players/RandomPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/players/RandomPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/deck/CircularLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/deck/CircularLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/deck/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/deck/Node.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,24 +51,24 @@
     <session id="751671872">
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1700" />
-          <entry key="txt" value="144" />
+          <entry key="java" value="3128" />
+          <entry key="txt" value="185" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1700" />
-          <entry key="PLAIN_TEXT" value="144" />
+          <entry key="JAVA" value="3128" />
+          <entry key="PLAIN_TEXT" value="185" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="3" />
+          <entry key="java" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="3" />
+          <entry key="JAVA" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
@@ -96,8 +97,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/GameEngine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="928">
-              <caret line="151" column="68" selection-start-line="151" selection-start-column="68" selection-end-line="151" selection-end-column="68" />
+            <state relative-caret-position="495">
+              <caret line="144" column="43" lean-forward="true" selection-start-line="144" selection-start-column="43" selection-end-line="144" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -108,11 +109,21 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Scoring.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+            <state relative-caret-position="160">
+              <caret line="43" column="89" lean-forward="true" selection-start-line="43" selection-start-column="89" selection-end-line="43" selection-end-column="89" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1446#1454#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/deck/CircularLinkedList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" column="2" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -223,16 +234,16 @@
         <option value="$PROJECT_DIR$/src/com/company/CardDeckTest.java" />
         <option value="$PROJECT_DIR$/src/com/company/GameEngineTest.java" />
         <option value="$PROJECT_DIR$/src/com/company/players/GUIPlayer.java" />
-        <option value="$PROJECT_DIR$/src/com/company/deck/CircularLinkedList.java" />
-        <option value="$PROJECT_DIR$/src/com/company/deck/Node.java" />
         <option value="$PROJECT_DIR$/src/com/company/players/RandomPlayerTest.java" />
         <option value="$PROJECT_DIR$/src/com/company/tests/RandomPlayerTest.java" />
         <option value="$PROJECT_DIR$/src/com/company/tests/GameEngineTest.java" />
         <option value="$PROJECT_DIR$/src/com/company/tests/CardDeckTest.java" />
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Scoring.java" />
         <option value="$PROJECT_DIR$/src/com/company/players/RandomPlayer.java" />
+        <option value="$PROJECT_DIR$/src/com/company/deck/Node.java" />
+        <option value="$PROJECT_DIR$/src/com/company/deck/CircularLinkedList.java" />
         <option value="$PROJECT_DIR$/src/com/company/GameEngine.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Scoring.java" />
       </list>
     </option>
   </component>
@@ -476,7 +487,7 @@
       <updated>1537490681875</updated>
       <workItem from="1537714703811" duration="18903000" />
       <workItem from="1537899669955" duration="1357000" />
-      <workItem from="1537934037665" duration="6424000" />
+      <workItem from="1537934037665" duration="17459000" />
     </task>
     <task id="LOCAL-00001" summary="added classes">
       <created>1537715798716</created>
@@ -541,7 +552,14 @@
       <option name="project" value="LOCAL" />
       <updated>1537909456968</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="added pudding and chopstick functions">
+      <created>1537986854010</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1537986854010</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -577,7 +595,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32449000" />
+    <option name="totallyTimeSpent" value="43484000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="70" y="25" width="1850" height="1055" extended-state="6" />
@@ -629,7 +647,8 @@
     <MESSAGE value="fixed bug with rounds not working" />
     <MESSAGE value="added a scoring class, made table a hashmap instead of arraylist" />
     <MESSAGE value="deleted completed TODOs" />
-    <option name="LAST_COMMIT_MESSAGE" value="deleted completed TODOs" />
+    <MESSAGE value="added pudding and chopstick functions" />
+    <option name="LAST_COMMIT_MESSAGE" value="added pudding and chopstick functions" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/company/players/Card.java" />
@@ -658,20 +677,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/deck/CircularLinkedList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/deck/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -723,23 +728,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/ImageHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/deck/CardDeck.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -764,10 +752,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/ImageHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/deck/CardDeck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/deck/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/deck/CircularLinkedList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="2" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/GameEngine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="928">
-          <caret line="151" column="68" selection-start-line="151" selection-start-column="68" selection-end-line="151" selection-end-column="68" />
+        <state relative-caret-position="495">
+          <caret line="144" column="43" lean-forward="true" selection-start-line="144" selection-start-column="43" selection-end-line="144" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -776,10 +795,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Scoring.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+        <state relative-caret-position="160">
+          <caret line="43" column="89" lean-forward="true" selection-start-line="43" selection-start-column="89" selection-end-line="43" selection-end-column="89" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1446#1454#0" expanded="true" />
           </folding>
         </state>
       </provider>

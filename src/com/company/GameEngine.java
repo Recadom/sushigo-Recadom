@@ -68,7 +68,6 @@ public class GameEngine {
 
             //deal the initial hands  int i = 0; i < amountOfPlayers; i++
             for (String player : allNames) {
-                //cardsOnTable.put(player, new ArrayList<>());
                 playerHands.addNode(generateHand());
             }
 
@@ -85,23 +84,19 @@ public class GameEngine {
                 for (int playerNum = 0; playerNum < amountOfPlayers; playerNum++) {
                     Player player = playerList.get(playerNum);
 
-                    //send each player their cards  //todo make sure proper values are used
+                    //send each player their cards
                     player.receiveHand(playerHand.data);
 
                     //receive the player's cards to be played
-                    /*
-                        If chopsticks are on table, allow two cards to be placed. It then should
-                        remove them from table, and add it back to the player's hand immediatly
-                        before rotating hands.
-                     */
-
-                    List<CardType> currentCardPlay = player.giveCardsPlayed(); //TODO add check for ch st & amt of cards
+                    List<CardType> currentCardPlay = player.giveCardsPlayed();
 
                     if(cardsOnTable.get(player.getName()).contains(CardType.Chopsticks)) {
+
                         //remove cards used from hand
                         playerHand.data.remove(currentCardPlay.get(0));
                         if(currentCardPlay.size() > 1) {
                             playerHand.data.remove(currentCardPlay.get(1));
+
                             //remove chopsticks and place into hand for next round
                             playerHand.data.add(CardType.Chopsticks);
                             cardsOnTable.get(player.getName()).remove(CardType.Chopsticks);
@@ -112,8 +107,10 @@ public class GameEngine {
                         }
 
                     } else {
-                        playerHand.data.remove(currentCardPlay.get(0));
-                        cardsOnTable.get(player.getName()).add(currentCardPlay.get(0));
+                        if(currentCardPlay != null) {
+                            playerHand.data.remove(currentCardPlay.get(0));
+                            cardsOnTable.get(player.getName()).add(currentCardPlay.get(0));
+                        }
                     }
 
 
@@ -121,6 +118,7 @@ public class GameEngine {
                     turnResults.add(new TurnResult(player.getName(),currentCardPlay, cardsOnTable.get(player.getName())));
 
                     //point the playerHand pointer to the next node; this cycles the player hands
+                    //could have used collections.reverse(), but this is cooler
                     playerHand = playerHand.next;
 
                     //count the cards left on the table
@@ -138,14 +136,14 @@ public class GameEngine {
                     recPlayer.receiveTurnResults(turnResults);
                 }
 
-                //todo keep track of puddings
-                //todo end game scoring engine, pass pudding + played cards
-                //tally current score
-                pointMap = Scoring.evaluateBoard(pointMap, cardsOnTable, allNames);
 
                 playerHand = playerHand.next;
-
             }
+
+            playerHands.head = playerHands.reverseList(playerHands.head);
+
+            //tally current score todo add board points at end of each round
+            pointMap = Scoring.evaluateBoard(cardsOnTable, allNames);
 
             //remove all but pudding
             for (List<CardType> playerTable : cardsOnTable.values()) {
