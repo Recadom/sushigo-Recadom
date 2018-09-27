@@ -38,11 +38,14 @@ public class ScoringTest {
       for (Player player : playerList) {
         allNames.add(player.getName());
         pointMap.put(player.getName(), 1);
-        //cardsOnTable.put(player.getName(), Arrays.asList(CardType.Wasabi));
       }
 
 
   }
+
+  /**
+   * Tests overall scoring based on cards submitted
+   */
 
   @Test
   public void evaluateBoardBasicGame() {
@@ -102,6 +105,11 @@ public class ScoringTest {
     }
     assertEquals(pointMap, Scoring.evaluateBoard(cardsOnTable, allNames, 1));
   }
+
+
+  /**
+   * Tests helper methods for scoring
+   */
 
   @Test
   public void countMaki() {

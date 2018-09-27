@@ -152,7 +152,7 @@ public class Scoring {
    * Calculates the pudding point score for all the players
    * @param allNames
    */
-  static void countPudding(List<String> allNames) { //todo have this only happen at the end of the game
+  static void countPudding(List<String> allNames) {
     Map<Integer, List<String>> dumpCounts= new TreeMap<>(Collections.reverseOrder());
     for (String player : allNames) {
 

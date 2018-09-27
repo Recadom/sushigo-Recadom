@@ -11,18 +11,11 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 public class GameEngineTest {
-    //GameEngine gameEngine;
 
-    /*@Before
-    public void setup() {
-        List<Player> playerList = new ArrayList<>();
-        playerList.add(new RandomPlayer());
-        playerList.add(new RandomPlayer());
-        playerList.add(new RandomPlayer());
-        playerList.add(new RandomPlayer());
-        //playerList.add(new GUIPlayer()); // Having a single GUIPlayer will play the game with a GUI
-        GameEngine gameEngine = new GameEngine(playerList);
-    }*/
+    /**
+     * Check to make sure the generate hand function works properly
+     */
+
 
     @Test
     public void generateHand() {
