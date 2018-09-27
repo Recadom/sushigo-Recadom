@@ -31,10 +31,8 @@ public class Main {
 
         //run 100 simulations
         for(int i = 0; i < 100; i++) {
-            gameEngine.playGame();
-            Map<String, Integer> pointMap = gameEngine.getPointMap();
-            String name = Collections.max(pointMap.entrySet(), Comparator.comparingInt(Map.Entry::getValue)).getKey();
-            winsPerPlayer.put(name, winsPerPlayer.get(name) + 1);
+            String winner = gameEngine.playGame();
+            winsPerPlayer.put(winner, winsPerPlayer.get(winner) + 1);
         }
 
         System.out.println(winsPerPlayer);

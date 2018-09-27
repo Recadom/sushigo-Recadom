@@ -7,9 +7,11 @@ import com.company.deck.Node;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.TreeMap;
 
 
 /**
@@ -60,7 +62,7 @@ public class GameEngine {
     /**
      * Method to play the game
      */
-    public void playGame(){
+    public String playGame(){
 
         //initialize variables
         final int ROUNDS = 3;
@@ -168,6 +170,37 @@ public class GameEngine {
         for (Player player : playerList) {
             player.endGame(pointMap);
         }
+
+        //compute winner if tiebreaker
+        Map<Integer, List<String>> leaderboard= new TreeMap<>(Collections.reverseOrder());
+        List<String> winners;
+
+        //sort winners into a leaderboard
+        for (String player : pointMap.keySet()) {
+            winners = new ArrayList<>();
+            int points = pointMap.get(player);
+            winners.add(player);
+            if(leaderboard.containsKey(points)) {
+                for (String winner : leaderboard.get(points)) {
+                    winners.add(winner);
+                }
+            }
+            leaderboard.put(pointMap.get(player), winners);
+        }
+
+        //compare only the 1st place tie and check for most amount of pudding cards
+        winners = leaderboard.get(((TreeMap<Integer, List<String>>) leaderboard).firstKey());
+        int maxCnt = 0;
+        String winner = winners.get(0);
+        for (String player : winners) {
+            int cnt = Collections.frequency(cardsOnTable.get(player), CardType.Pudding);
+            if (cnt > maxCnt) {
+                maxCnt = cnt;
+                winner = player;
+            }
+        }
+
+        return winner;
     }
 
     /**
