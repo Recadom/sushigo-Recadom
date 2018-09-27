@@ -2,6 +2,8 @@ package com.company;
 import com.company.players.GUIPlayer;
 import com.company.players.RandomPlayer;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -31,9 +33,8 @@ public class Main {
         for(int i = 0; i < 100; i++) {
             gameEngine.playGame();
             Map<String, Integer> pointMap = gameEngine.getPointMap();
-            for(String name : pointMap.keySet()) {
-                winsPerPlayer.put(name, winsPerPlayer.get(name) + pointMap.get(name));
-            }
+            String name = Collections.max(pointMap.entrySet(), Comparator.comparingInt(Map.Entry::getValue)).getKey();
+            winsPerPlayer.put(name, winsPerPlayer.get(name) + 1);
         }
 
         System.out.println(winsPerPlayer);

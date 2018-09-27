@@ -6,12 +6,12 @@ import com.company.Player;
 import com.company.TurnResult;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
 public class RandomPlayer implements Player {
-    private GraphicsEngine graphicsEngine;
     private String playerName;
     private List<String> allPlayerNames;
     private List<CardType> cards;
@@ -34,6 +34,9 @@ public class RandomPlayer implements Player {
      * Called at the start of every new game.
      */
     public void newGame() {
+        String playerName = new String();
+        List<String> allPlayerNames = new ArrayList<>();
+        List<CardType> cards = new LinkedList<>();
     }
 
     /**
