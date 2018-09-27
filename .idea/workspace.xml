@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="74e08c6c-515f-46d2-900d-aaec62aae178" name="Default" comment="added simulations and cleaned up code">
+    <list default="true" id="74e08c6c-515f-46d2-900d-aaec62aae178" name="Default" comment="made simulations count wins">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/players/RandomPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/players/RandomPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/tests/RandomPlayerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/tests/com/company/ScoringTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/tests/com/company/ScoringTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/tests/com/company/ScoringTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -13,6 +11,14 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/sushigo_Recadom$Main.ic" NAME="Main Coverage Results" MODIFIED="1538018632900" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.company.deck.*</FILTER>
+    </SUITE>
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="235" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -64,24 +70,24 @@
     <session id="751671872">
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="6392" />
-          <entry key="txt" value="276" />
+          <entry key="java" value="6931" />
+          <entry key="txt" value="303" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="6392" />
-          <entry key="PLAIN_TEXT" value="276" />
+          <entry key="JAVA" value="6931" />
+          <entry key="PLAIN_TEXT" value="303" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="13" />
+          <entry key="java" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="13" />
+          <entry key="JAVA" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
@@ -95,11 +101,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="35" column="118" selection-start-line="35" selection-start-column="118" selection-end-line="35" selection-end-column="118" />
+            <state relative-caret-position="540">
+              <caret line="36" column="12" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -110,8 +116,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/GameEngine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="29" column="50" lean-forward="true" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
+            <state relative-caret-position="1150">
+              <caret line="172" column="50" selection-start-line="172" selection-start-column="50" selection-end-line="172" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#6255#6256#0" expanded="true" />
@@ -124,7 +130,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/players/RandomPlayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
+            <state relative-caret-position="-395">
               <caret line="39" column="5" lean-forward="true" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -138,8 +144,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Scoring.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="62" column="36" selection-start-line="62" selection-start-column="36" selection-end-line="62" selection-end-column="36" />
+            <state relative-caret-position="208">
+              <caret line="39" selection-start-line="39" selection-end-line="39" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2124#2132#0" expanded="true" />
@@ -149,11 +155,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/tests/com/company/ScoringTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="24" column="6" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
+            <state relative-caret-position="-95">
+              <caret line="39" column="42" lean-forward="true" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
+              <folding>
+                <element signature="e#1759#1760#0" expanded="true" />
+                <element signature="e#1796#1797#0" expanded="true" />
+                <element signature="e#1836#1837#0" expanded="true" />
+                <element signature="e#1878#1879#0" expanded="true" />
+                <element signature="e#1918#1919#0" expanded="true" />
+                <element signature="e#1958#1959#0" expanded="true" />
+                <element signature="e#2000#2001#0" expanded="true" />
+                <element signature="e#2044#2045#0" expanded="true" />
+                <element signature="e#2084#2085#0" expanded="true" />
+                <element signature="e#2124#2125#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -194,6 +212,7 @@
       <find>cardsPlayed</find>
       <find>cardsOnTable</find>
       <find>cardsOnTableCnt</find>
+      <find>Arrays</find>
     </findStrings>
     <replaceStrings>
       <replace>cardsOnTable</replace>
@@ -230,12 +249,12 @@
         <option value="$PROJECT_DIR$/src/com/company/tests/CardDeckTest.java" />
         <option value="$PROJECT_DIR$/src/com/company/deck/Node.java" />
         <option value="$PROJECT_DIR$/src/com/company/Scoring.java" />
-        <option value="$PROJECT_DIR$/src/com/company/GameEngine.java" />
         <option value="$PROJECT_DIR$/src/com/company/deck/CircularLinkedList.java" />
         <option value="$PROJECT_DIR$/src/com/company/deck/CardDeck.java" />
         <option value="$PROJECT_DIR$/src/com/company/players/RandomPlayer.java" />
-        <option value="$PROJECT_DIR$/src/com/company/tests/com/company/ScoringTest.java" />
+        <option value="$PROJECT_DIR$/src/com/company/GameEngine.java" />
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/company/tests/com/company/ScoringTest.java" />
       </list>
     </option>
   </component>
@@ -310,7 +329,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538015962780" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538018677566" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -378,56 +397,66 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CardDeckTest.takeCardTop (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="sushigo" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CardDeckTest" />
-      <option name="METHOD_NAME" value="takeCardTop" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CardDeckTest.takeCardTop" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ScoringTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sushigo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.company.deck.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.company.deck" />
-      <option name="MAIN_CLASS_NAME" value="com.company.deck.CardDeckTest" />
-      <option name="METHOD_NAME" value="takeCardTop" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GameEngineTest.generateHand (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="sushigo" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="GameEngineTest" />
-      <option name="METHOD_NAME" value="generateHand" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GameEngineTest.generateHand" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="sushigo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.company.deck.*" />
+          <option name="PATTERN" value="com.company.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.company" />
-      <option name="MAIN_CLASS_NAME" value="com.company.GameEngineTest" />
-      <option name="METHOD_NAME" value="generateHand" />
+      <option name="MAIN_CLASS_NAME" value="com.company.ScoringTest" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ScoringTest.MakiScoringTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sushigo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.company" />
+      <option name="MAIN_CLASS_NAME" value="com.company.ScoringTest" />
+      <option name="METHOD_NAME" value="MakiScoringTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ScoringTest.evaluateBoard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sushigo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.company" />
+      <option name="MAIN_CLASS_NAME" value="com.company.ScoringTest" />
+      <option name="METHOD_NAME" value="evaluateBoard" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ScoringTest.evaluateBoardBasicGame" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sushigo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.company" />
+      <option name="MAIN_CLASS_NAME" value="com.company.ScoringTest" />
+      <option name="METHOD_NAME" value="evaluateBoardBasicGame" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -459,18 +488,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.Main" />
-      <item itemvalue="JUnit.GameEngineTest.generateHand" />
-      <item itemvalue="JUnit.CardDeckTest.takeCardTop" />
-      <item itemvalue="JUnit.CardDeckTest.takeCardTop (1)" />
-      <item itemvalue="JUnit.GameEngineTest.generateHand (1)" />
+      <item itemvalue="JUnit.ScoringTest.evaluateBoard" />
+      <item itemvalue="JUnit.ScoringTest" />
+      <item itemvalue="JUnit.ScoringTest.evaluateBoardBasicGame" />
+      <item itemvalue="JUnit.ScoringTest.MakiScoringTest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.GameEngineTest.generateHand (1)" />
-        <item itemvalue="JUnit.CardDeckTest.takeCardTop (1)" />
-        <item itemvalue="JUnit.GameEngineTest.generateHand" />
-        <item itemvalue="JUnit.CardDeckTest.takeCardTop" />
+        <item itemvalue="JUnit.ScoringTest.MakiScoringTest" />
+        <item itemvalue="JUnit.ScoringTest" />
+        <item itemvalue="JUnit.ScoringTest.evaluateBoardBasicGame" />
+        <item itemvalue="JUnit.ScoringTest.evaluateBoard" />
       </list>
     </recent_temporary>
   </component>
@@ -486,7 +515,7 @@
       <updated>1537490681875</updated>
       <workItem from="1537714703811" duration="18903000" />
       <workItem from="1537899669955" duration="1357000" />
-      <workItem from="1537934037665" duration="27688000" />
+      <workItem from="1537934037665" duration="30410000" />
     </task>
     <task id="LOCAL-00001" summary="added classes">
       <created>1537715798716</created>
@@ -579,43 +608,50 @@
       <option name="project" value="LOCAL" />
       <updated>1538014318032</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="made simulations count wins">
+      <created>1538015982962</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1538015982962</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="GameEngineTest_generateHand - 2018.09.23 at 14h 40m 34s.xml">
-      <configuration name="GameEngineTest.generateHand" configurationId="JUnit" />
+    <history-entry file="ScoringTest_evaluateBoardBasicGame - 2018.09.26 at 22h 19m 47s.xml">
+      <configuration name="ScoringTest.evaluateBoardBasicGame" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GameEngineTest_generateHand - 2018.09.23 at 14h 40m 53s.xml">
-      <configuration name="GameEngineTest.generateHand" configurationId="JUnit" />
+    <history-entry file="ScoringTest_evaluateBoardBasicGame - 2018.09.26 at 22h 19m 56s.xml">
+      <configuration name="ScoringTest.evaluateBoardBasicGame" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GameEngineTest_generateHand - 2018.09.23 at 14h 41m 01s.xml">
-      <configuration name="GameEngineTest.generateHand" configurationId="JUnit" />
+    <history-entry file="ScoringTest - 2018.09.26 at 22h 20m 00s.xml">
+      <configuration name="ScoringTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GameEngineTest_generateHand - 2018.09.23 at 14h 41m 14s.xml">
-      <configuration name="GameEngineTest.generateHand" configurationId="JUnit" />
+    <history-entry file="ScoringTest - 2018.09.26 at 22h 20m 23s.xml">
+      <configuration name="ScoringTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CardDeckTest_takeCardTop - 2018.09.23 at 14h 41m 50s.xml">
-      <configuration name="CardDeckTest.takeCardTop" configurationId="JUnit" />
+    <history-entry file="ScoringTest_MakiScoringTest - 2018.09.26 at 22h 20m 27s.xml">
+      <configuration name="ScoringTest.MakiScoringTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CardDeckTest_takeCardTop - 2018.09.23 at 14h 42m 24s.xml">
-      <configuration name="CardDeckTest.takeCardTop" configurationId="JUnit" />
+    <history-entry file="ScoringTest_MakiScoringTest - 2018.09.26 at 22h 20m 51s.xml">
+      <configuration name="ScoringTest.MakiScoringTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GameEngineTest_generateHand - 2018.09.23 at 14h 45m 59s.xml">
-      <configuration name="GameEngineTest.generateHand" configurationId="JUnit" />
+    <history-entry file="ScoringTest_MakiScoringTest - 2018.09.26 at 22h 21m 15s.xml">
+      <configuration name="ScoringTest.MakiScoringTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GameEngineTest_generateHand - 2018.09.23 at 14h 46m 42s.xml">
-      <configuration name="GameEngineTest.generateHand" configurationId="JUnit" />
+    <history-entry file="ScoringTest_MakiScoringTest - 2018.09.26 at 22h 21m 35s.xml">
+      <configuration name="ScoringTest.MakiScoringTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CardDeckTest_takeCardTop_(1) - 2018.09.25 at 13h 43m 25s.xml">
-      <configuration name="CardDeckTest.takeCardTop (1)" configurationId="JUnit" />
+    <history-entry file="ScoringTest_MakiScoringTest - 2018.09.26 at 22h 21m 41s.xml">
+      <configuration name="ScoringTest.MakiScoringTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GameEngineTest_generateHand_(1) - 2018.09.25 at 13h 43m 30s.xml">
-      <configuration name="GameEngineTest.generateHand (1)" configurationId="JUnit" />
+    <history-entry file="ScoringTest_MakiScoringTest - 2018.09.26 at 22h 22m 53s.xml">
+      <configuration name="ScoringTest.MakiScoringTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53713000" />
+    <option name="totallyTimeSpent" value="56435000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="70" y="25" width="1850" height="1055" extended-state="6" />
@@ -631,7 +667,7 @@
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.49716875" visible="true" weight="0.23567568" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49716875" visible="true" weight="0.23567568" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.39956093" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -640,6 +676,7 @@
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5028313" side_tool="true" weight="0.3336831" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="right" id="Coverage" side_tool="true" weight="0.32982263" />
       <window_info anchor="right" id="Database" order="0" weight="0.32982263" />
       <window_info anchor="right" id="Commander" order="1" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
@@ -671,7 +708,8 @@
     <MESSAGE value="added a few scoring methods" />
     <MESSAGE value="finished scoring" />
     <MESSAGE value="added simulations and cleaned up code" />
-    <option name="LAST_COMMIT_MESSAGE" value="added simulations and cleaned up code" />
+    <MESSAGE value="made simulations count wins" />
+    <option name="LAST_COMMIT_MESSAGE" value="made simulations count wins" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/company/players/Card.java" />
@@ -762,18 +800,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Scoring.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="62" column="36" selection-start-line="62" selection-start-column="36" selection-end-line="62" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2124#2132#0" expanded="true" />
-            <element signature="e#5016#5024#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/players/GUIPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -784,9 +810,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/util/function/ToIntFunction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="47" column="8" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/players/RandomPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
+        <state relative-caret-position="-395">
           <caret line="39" column="5" lean-forward="true" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -796,17 +829,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/tests/com/company/ScoringTest.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/Scoring.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="24" column="6" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
+        <state relative-caret-position="208">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2124#2132#0" expanded="true" />
+            <element signature="e#5016#5024#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="12" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/GameEngine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="29" column="50" lean-forward="true" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
+        <state relative-caret-position="1150">
+          <caret line="172" column="50" selection-start-line="172" selection-start-column="50" selection-end-line="172" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#6255#6256#0" expanded="true" />
@@ -815,12 +863,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/tests/com/company/ScoringTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="118" selection-start-line="35" selection-start-column="118" selection-end-line="35" selection-end-column="118" />
+        <state relative-caret-position="-95">
+          <caret line="39" column="42" lean-forward="true" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1759#1760#0" expanded="true" />
+            <element signature="e#1796#1797#0" expanded="true" />
+            <element signature="e#1836#1837#0" expanded="true" />
+            <element signature="e#1878#1879#0" expanded="true" />
+            <element signature="e#1918#1919#0" expanded="true" />
+            <element signature="e#1958#1959#0" expanded="true" />
+            <element signature="e#2000#2001#0" expanded="true" />
+            <element signature="e#2044#2045#0" expanded="true" />
+            <element signature="e#2084#2085#0" expanded="true" />
+            <element signature="e#2124#2125#0" expanded="true" />
           </folding>
         </state>
       </provider>
