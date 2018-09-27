@@ -4,7 +4,6 @@ import com.company.deck.CardDeck;
 import com.company.deck.CardType;
 import com.company.deck.CircularLinkedList;
 import com.company.deck.Node;
-//import com.company.deck.Node;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -12,6 +11,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+
+/**
+ * Class that runs the game
+ */
 public class GameEngine {
     private List<Player> playerList;
     private List<String> allNames = new ArrayList<>();
@@ -20,6 +23,10 @@ public class GameEngine {
     private Map<String, Integer> pointMap;
     private int cardsPerHand, amountOfPlayers;
 
+    /**
+     * Initializes the game values and variables
+     * @param playerListIn list of all the players
+     */
     public GameEngine(List<Player> playerListIn) {
         this.playerList = playerListIn;
 
@@ -50,7 +57,12 @@ public class GameEngine {
 
     }
 
+    /**
+     * Method to play the game
+     */
     public void playGame(){
+
+        //initialize variables
         final int ROUNDS = 3;
         deck = new CardDeck();
         deck.shuffle();
@@ -61,13 +73,12 @@ public class GameEngine {
             cardsOnTable.put(player, new ArrayList<>());
         }
 
-
+        //run the game for 3 rounds
         for (int round = 0; round < ROUNDS; round++) {
-            //cardsOnTable = new HashMap<>();
+
             playerHands = new CircularLinkedList();
 
-            //deal the initial hands  int i = 0; i < amountOfPlayers; i++
-            for (String player : allNames) {
+            for (int i = 0; i < amountOfPlayers; i++) {
                 playerHands.addNode(generateHand());
             }
 
@@ -84,12 +95,10 @@ public class GameEngine {
                 for (int playerNum = 0; playerNum < amountOfPlayers; playerNum++) {
                     Player player = playerList.get(playerNum);
 
-                    //send each player their cards
                     player.receiveHand(playerHand.data);
-
-                    //receive the player's cards to be played
                     List<CardType> currentCardPlay = player.giveCardsPlayed();
 
+                    //check for chopsticks
                     if(cardsOnTable.get(player.getName()).contains(CardType.Chopsticks)) {
 
                         //remove cards used from hand
@@ -113,12 +122,10 @@ public class GameEngine {
                         }
                     }
 
-
-
                     turnResults.add(new TurnResult(player.getName(),currentCardPlay, cardsOnTable.get(player.getName())));
 
                     //point the playerHand pointer to the next node; this cycles the player hands
-                    //could have used collections.reverse(), but this is cooler
+                    //could have used collections.reverse() with an arrayList, but this is cooler
                     playerHand = playerHand.next;
 
                     //count the cards left on the table
@@ -142,7 +149,7 @@ public class GameEngine {
 
             playerHands.head = playerHands.reverseList(playerHands.head);
 
-            //tally current score todo add board points at end of each round
+            //tally current score
             pointMap = Scoring.evaluateBoard(cardsOnTable, allNames, round);
 
             //remove all but pudding
@@ -163,6 +170,7 @@ public class GameEngine {
         }
     }
 
+    //creates a hand for the cards based on a deck
     public List<CardType> generateHand() {
         List<CardType> hand = new ArrayList<>();
 
@@ -173,4 +181,8 @@ public class GameEngine {
         return hand;
     }
 
+    //return a map of the points
+    public Map<String, Integer> getPointMap() {
+        return pointMap;
+    }
 }

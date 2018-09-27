@@ -3,9 +3,16 @@ package com.company.deck;
 import java.util.Collections;
 import java.util.Stack;
 
+
+/**
+ * Class that simulates a deck of cards
+ */
 public class CardDeck {
     private Stack<CardType> cards;
 
+    /**
+     * Sets up a deck with the specified amounts of cards
+     */
     public CardDeck() {
         this.cards = new Stack<CardType>();
 

@@ -141,10 +141,10 @@ public class Scoring {
   static void countDumplings(String player) {
     int cnt = Collections.frequency(cardsOnTable.get(player), CardType.Dumpling);
     if (cnt > 0 && cnt <= 5) {
-      pointMap.put(player, pointMap.get(player) + DUMPLING_POINTS[cnt]);
+      pointMap.put(player, pointMap.get(player) + DUMPLING_POINTS[cnt - 1]);
     }
     else if (cnt > 5) {
-      pointMap.put(player, pointMap.get(player) + DUMPLING_POINTS[5]);
+      pointMap.put(player, pointMap.get(player) + DUMPLING_POINTS[4]);
     }
   }
 
