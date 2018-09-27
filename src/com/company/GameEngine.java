@@ -31,7 +31,7 @@ public class GameEngine {
         this.playerList = playerListIn;
 
         //compile names
-        for (int i = 0; i < playerList.size(); i++) { //todo make sure players are aligned correctly
+        for (int i = 0; i < playerList.size(); i++) {
             allNames.add("Player " + (i+1));
         }
 
@@ -170,7 +170,10 @@ public class GameEngine {
         }
     }
 
-    //creates a hand for the cards based on a deck
+    /**
+     * Creates a hand for the cards based on a deck
+     * @return a list containing a randomized hand
+     */
     public List<CardType> generateHand() {
         List<CardType> hand = new ArrayList<>();
 
@@ -181,7 +184,10 @@ public class GameEngine {
         return hand;
     }
 
-    //return a map of the points
+    /**
+     * Return a map of the points
+     * @return map of players to their points
+     */
     public Map<String, Integer> getPointMap() {
         return pointMap;
     }

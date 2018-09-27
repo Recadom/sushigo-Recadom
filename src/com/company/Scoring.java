@@ -86,7 +86,6 @@ public class Scoring {
       List<String> winners = makiCounts.get(itr.next());
       for (String player : winners) {
         pointMap.put(player, pointMap.get(player) + 6 / winners.size() / i);
-        //System.out.println(winners.size() + " " + i + ": " + 6 / winners.size() / i);
       }
     }
 

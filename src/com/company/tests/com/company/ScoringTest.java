@@ -74,9 +74,31 @@ public class ScoringTest {
   @Test
   public void WasabiScoringTest() {
     cardsOnTable = new HashMap<>();
+    pointMap.put("Player 4", 2);
+    pointMap.put("Player 3", 2);
+    pointMap.put("Player 2", 2);
+    pointMap.put("Player 1", 2);
     for (Player player : playerList) {
       cardsOnTable.put(player.getName(), Arrays.asList(CardType.MakiRollOne));
       cardsOnTable.put(player.getName(), Arrays.asList(CardType.EggNigiri));
+    }
+    assertEquals(pointMap, Scoring.evaluateBoard(cardsOnTable, allNames, 1));
+  }
+
+  @Test
+  public void PuddingScoringTest() {
+    cardsOnTable = new HashMap<>();
+    for (Player player : playerList) {
+      cardsOnTable.put(player.getName(), Arrays.asList(CardType.Pudding));
+    }
+    assertEquals(pointMap, Scoring.evaluateBoard(cardsOnTable, allNames, 1));
+  }
+
+  @Test
+  public void DumplingScoringTest() {
+    cardsOnTable = new HashMap<>();
+    for (Player player : playerList) {
+      cardsOnTable.put(player.getName(), Arrays.asList(CardType.Pudding));
     }
     assertEquals(pointMap, Scoring.evaluateBoard(cardsOnTable, allNames, 1));
   }
