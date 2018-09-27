@@ -143,7 +143,7 @@ public class GameEngine {
             playerHands.head = playerHands.reverseList(playerHands.head);
 
             //tally current score todo add board points at end of each round
-            pointMap = Scoring.evaluateBoard(cardsOnTable, allNames);
+            pointMap = Scoring.evaluateBoard(cardsOnTable, allNames, round);
 
             //remove all but pudding
             for (List<CardType> playerTable : cardsOnTable.values()) {

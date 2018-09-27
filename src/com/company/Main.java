@@ -16,6 +16,13 @@ public class Main {
         playerList.add(new GUIPlayer());
 
         GameEngine gameEngine = new GameEngine(playerList);
-        gameEngine.playGame();
+
+        int[] winsPerPlayer = new int[4];
+
+        for(int i = 0; i < 100; i++) {
+            gameEngine.playGame();
+        }
+
+        System.out.println(winsPerPlayer);
     }
 }
