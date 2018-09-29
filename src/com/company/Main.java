@@ -1,12 +1,10 @@
 package com.company;
-import com.company.players.GUIPlayer;
-import com.company.players.GoodGui;
+import com.company.competition.GoodBot;
+import com.company.competition.UberBot;
 import com.company.players.RandomPlayer;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -19,7 +17,9 @@ import java.util.Map;
 public class Main {
     public static void main(String[] args) {
         List<Player> playerList = new ArrayList<>();
-        playerList.add(new GoodGui());
+        //playerList.add(new GoodBot());
+        //playerList.add(new UberBot());
+        playerList.add(new RandomPlayer());
         playerList.add(new RandomPlayer());
         playerList.add(new RandomPlayer());
         playerList.add(new RandomPlayer());
@@ -40,7 +40,7 @@ public class Main {
             winsPerPlayer.put(winner, winsPerPlayer.get(winner) + 1);
         }
 
-        DecimalFormat df = new DecimalFormat("#");
+        DecimalFormat df = new DecimalFormat("#.#");
         for(String player : winsPerPlayer.keySet()) {
             double winRate = (double) winsPerPlayer.get(player) / (double) SIMULATIONS * 100.0;
             System.out.println(player + ": " + df.format(winRate));

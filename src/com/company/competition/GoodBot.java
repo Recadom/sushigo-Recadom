@@ -1,13 +1,12 @@
-package com.company.players;
+package com.company.competition;
 
 import com.company.deck.CardType;
-import com.company.GraphicsEngine;
 import com.company.Player;
 import com.company.TurnResult;
 
 import java.util.*;
 
-public class GoodGui implements Player {
+public class GoodBot implements Player {
     private String playerName;
     private List<String> allPlayerNames;
     private TreeMap<Integer, CardType> cards;
@@ -59,8 +58,6 @@ public class GoodGui implements Player {
      * @param cards List of cards that represent the player's hand for this turn.
      */
     public void receiveHand(List<CardType> cards) {
-        round = (round + 1) % 4;
-
         if(currentTable.contains(CardType.SquidNigiri)) {
             currentTable.remove(CardType.Wasabi);
             currentTable.remove(CardType.SquidNigiri);
@@ -112,6 +109,8 @@ public class GoodGui implements Player {
             this.cards.put(cardValues.get(card), card);
         }
 
+        ++round;
+
     }
 
     /**
@@ -150,6 +149,7 @@ public class GoodGui implements Player {
      * @param pointMap Map of player names to points at the end of the round.
      */
     public void endRound(Map<String, Integer> pointMap) {
+        round = 0;
     }
 
     /**

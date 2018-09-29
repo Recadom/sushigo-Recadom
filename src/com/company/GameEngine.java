@@ -202,11 +202,11 @@ public class GameEngine {
         String winner = winners.get(0);
         for (String player : winners) {
             int cnt = Collections.frequency(cardsOnTable.get(player), CardType.Pudding);
-            if (cnt > maxCnt) {
-                maxCnt = cnt;
-                winner = player;
-            }
+        if (cnt > maxCnt) {
+            maxCnt = cnt;
+            winner = player;
         }
+    }
 
         return winner;
     }
