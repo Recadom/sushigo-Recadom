@@ -12,9 +12,10 @@ public class GoodGui implements Player {
     private List<String> allPlayerNames;
     private TreeMap<Integer, CardType> cards;
     List<List<TurnResult>> allTurns = new ArrayList<>();
-    List<CardType> currentTable = new ArrayList<>();
+    List<CardType> currentTable;
     int playerIndex = 0;
     HashMap<CardType, Integer> cardValues = new HashMap<>();
+    int round = 0;
 
 
     /**
@@ -37,19 +38,20 @@ public class GoodGui implements Player {
         String playerName = new String();
         List<String> allPlayerNames = new ArrayList<>();
         List<CardType> cards = new LinkedList<>();
+        currentTable = new ArrayList<>();
 
-        cardValues.put(CardType.Tempura, 1);
-        cardValues.put(CardType.Sashimi, 1);
-        cardValues.put(CardType.Dumpling, 1);
-        cardValues.put(CardType.MakiRollTwo, 1);
-        cardValues.put(CardType.MakiRollThree, 1);
-        cardValues.put(CardType.MakiRollOne, 1);
-        cardValues.put(CardType.SalmonNigiri, 1);
-        cardValues.put(CardType.SquidNigiri, 1);
-        cardValues.put(CardType.EggNigiri, 1);
+        cardValues.put(CardType.Tempura, 25);
+        cardValues.put(CardType.Sashimi, 20);
+        cardValues.put(CardType.Dumpling, 0);
+        cardValues.put(CardType.MakiRollOne, 20);
+        cardValues.put(CardType.MakiRollTwo, 30);
+        cardValues.put(CardType.MakiRollThree, 40);
+        cardValues.put(CardType.EggNigiri, 10);
+        cardValues.put(CardType.SalmonNigiri, 15);
+        cardValues.put(CardType.SquidNigiri, 20);
         cardValues.put(CardType.Pudding, 10);
-        cardValues.put(CardType.Wasabi, 5);
-        cardValues.put(CardType.Chopsticks, 6);
+        cardValues.put(CardType.Wasabi, 91);
+        cardValues.put(CardType.Chopsticks, 80);
     }
 
     /**
@@ -57,6 +59,54 @@ public class GoodGui implements Player {
      * @param cards List of cards that represent the player's hand for this turn.
      */
     public void receiveHand(List<CardType> cards) {
+        round = (round + 1) % 4;
+
+        if(currentTable.contains(CardType.SquidNigiri)) {
+            currentTable.remove(CardType.Wasabi);
+            currentTable.remove(CardType.SquidNigiri);
+        }
+        if(currentTable.contains(CardType.SalmonNigiri)) {
+            currentTable.remove(CardType.Wasabi);
+            currentTable.remove(CardType.SalmonNigiri);
+        }
+        if(currentTable.contains(CardType.EggNigiri)) {
+            currentTable.remove(CardType.Wasabi);
+            currentTable.remove(CardType.EggNigiri);
+        }
+
+
+        cardValues.put(CardType.Wasabi, 91 - round * 10);
+        cardValues.put(CardType.Chopsticks, 90 - round * 10);
+        cardValues.put(CardType.Sashimi, 20 - round * 2);
+
+        if(currentTable.contains(CardType.Wasabi)) {
+            cardValues.put(CardType.EggNigiri, 60);
+            cardValues.put(CardType.SalmonNigiri, 70);
+            cardValues.put(CardType.SquidNigiri, 90);
+        }
+        else {
+            cardValues.put(CardType.SalmonNigiri, 20);
+            cardValues.put(CardType.SquidNigiri, 30);
+            cardValues.put(CardType.EggNigiri, 10);
+        }
+
+        if(currentTable.contains(CardType.Chopsticks)) {
+
+        }
+
+        if(currentTable.contains(CardType.Tempura)) {
+            cardValues.put(CardType.Tempura, 50);
+        }
+        else {
+            cardValues.put(CardType.Tempura, 25);
+        }
+
+        if(currentTable.contains(CardType.MakiRollOne) || currentTable.contains(CardType.MakiRollTwo) || currentTable.contains(CardType.MakiRollThree)) {
+            cardValues.put(CardType.MakiRollOne, 10);
+            cardValues.put(CardType.MakiRollTwo, 15);
+            cardValues.put(CardType.MakiRollThree, 20);
+        }
+
         this.cards = new TreeMap<Integer, CardType>();
         for (CardType card : cards) {
             this.cards.put(cardValues.get(card), card);
@@ -73,17 +123,23 @@ public class GoodGui implements Player {
      */
     public List<CardType> giveCardsPlayed() {
         List<CardType> cardsPlayed = new ArrayList<>();
+        //System.out.println(cards.entrySet());
 
         if (cards.entrySet().size() == 0) {
             return null;
         }
 
         cardsPlayed.add(cards.lastEntry().getValue());
+        cards.remove(cards.lastKey());
 
-        if (cards.entrySet().size() > 1) {
-            cards.lastEntry().getValue();
+        if (currentTable.contains(CardType.Chopsticks) && cards.entrySet().size() > 1) {
+            cardsPlayed.add(cards.lastEntry().getValue());
+            currentTable.remove(CardType.Chopsticks);
         }
 
+
+
+        //System.out.println(cardsPlayed);
         return cardsPlayed;
     }
 
@@ -112,7 +168,7 @@ public class GoodGui implements Player {
             }
         }
 
-        currentTable = turnResults.get(playerIndex).getPlayerTableHand();
+        currentTable = new ArrayList<>(turnResults.get(playerIndex).getPlayerTableHand());
     }
 
     /**

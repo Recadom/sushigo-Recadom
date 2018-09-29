@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="74e08c6c-515f-46d2-900d-aaec62aae178" name="Default" comment="began making structures for card choice">
+    <list default="true" id="74e08c6c-515f-46d2-900d-aaec62aae178" name="Default" comment="made game output easier to read">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/GameEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/GameEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Scoring.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Scoring.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/players/GoodGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/players/GoodGui.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -26,24 +27,24 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="27" />
+          <entry key="java" value="28" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="27" />
+          <entry key="JAVA" value="28" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="5081" />
-          <entry key="txt" value="315" />
+          <entry key="java" value="5920" />
+          <entry key="txt" value="349" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="5081" />
-          <entry key="PLAIN_TEXT" value="315" />
+          <entry key="JAVA" value="5920" />
+          <entry key="PLAIN_TEXT" value="349" />
         </counts>
       </usages-collector>
     </session>
@@ -53,8 +54,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="35" column="37" lean-forward="true" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
+            <state relative-caret-position="291">
+              <caret line="34" column="29" lean-forward="true" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -77,8 +78,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/GameEngine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="986">
-              <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
+            <state relative-caret-position="342">
+              <caret line="163" selection-start-line="163" selection-end-line="163" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#7512#7513#0" expanded="true" />
@@ -89,13 +90,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/deck/CardDeck.java">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Scoring.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="29" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="442">
+              <caret line="53" selection-start-line="53" selection-end-line="53" />
             </state>
           </provider>
         </entry>
@@ -103,12 +101,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/players/GoodGui.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="81" selection-start-line="81" selection-end-line="81" />
+            <state relative-caret-position="2091">
+              <caret line="141" column="10" selection-start-line="141" selection-start-column="10" selection-end-line="141" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#5025#5026#0" expanded="true" />
-                <element signature="e#5058#5059#0" expanded="true" />
+                <element signature="e#6257#6258#0" expanded="true" />
+                <element signature="e#6290#6291#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -117,8 +115,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/deck/CardType.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="19" selection-end-column="14" />
+            <state relative-caret-position="170">
+              <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -126,8 +124,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/TurnResult.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="26" column="7" lean-forward="true" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
+            <state relative-caret-position="102">
+              <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -135,7 +133,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/players/GUIPlayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
+            <state relative-caret-position="544">
               <caret line="36" column="45" lean-forward="true" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -190,13 +188,14 @@
         <option value="$PROJECT_DIR$/src/com/company/players/GUIPlayer.java" />
         <option value="$PROJECT_DIR$/src/com/company/deck/CircularLinkedList.java" />
         <option value="$PROJECT_DIR$/src/com/company/deck/Node.java" />
-        <option value="$PROJECT_DIR$/src/com/company/GameEngine.java" />
         <option value="$PROJECT_DIR$/src/com/company/players/RandomPlayerTest.java" />
         <option value="$PROJECT_DIR$/src/com/company/tests/RandomPlayerTest.java" />
         <option value="$PROJECT_DIR$/src/com/company/tests/GameEngineTest.java" />
         <option value="$PROJECT_DIR$/src/com/company/tests/CardDeckTest.java" />
         <option value="$PROJECT_DIR$/src/com/company/players/goodgui.java" />
         <option value="$PROJECT_DIR$/src/com/company/players/GoodGui.java" />
+        <option value="$PROJECT_DIR$/src/com/company/GameEngine.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Scoring.java" />
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
       </list>
     </option>
@@ -208,8 +207,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="825" />
-    <option name="width" value="1102" />
+    <option name="x" value="759" />
+    <option name="width" value="1168" />
     <option name="height" value="1087" />
   </component>
   <component name="ProjectView">
@@ -271,7 +270,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538249137411" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538253839585" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -448,7 +447,7 @@
       <workItem from="1537714703811" duration="18903000" />
       <workItem from="1537899669955" duration="1417000" />
       <workItem from="1538234914307" duration="36000" />
-      <workItem from="1538245926253" duration="3209000" />
+      <workItem from="1538245926253" duration="7908000" />
     </task>
     <task id="LOCAL-00001" summary="added classes">
       <created>1537715798716</created>
@@ -506,7 +505,14 @@
       <option name="project" value="LOCAL" />
       <updated>1538247928009</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="made game output easier to read">
+      <created>1538249161615</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1538249161615</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -542,7 +548,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23565000" />
+    <option name="totallyTimeSpent" value="28264000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
@@ -593,7 +599,8 @@
     <MESSAGE value="refactored card and deck classes and put them in another package" />
     <MESSAGE value="cleaned up code, directory structure, tests" />
     <MESSAGE value="began making structures for card choice" />
-    <option name="LAST_COMMIT_MESSAGE" value="began making structures for card choice" />
+    <MESSAGE value="made game output easier to read" />
+    <option name="LAST_COMMIT_MESSAGE" value="made game output easier to read" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/company/ImageHelper.java">
@@ -656,7 +663,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/players/GUIPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
+        <state relative-caret-position="544">
           <caret line="36" column="45" lean-forward="true" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -669,15 +676,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/TurnResult.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="26" column="7" lean-forward="true" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/deck/CardType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="19" selection-end-column="14" />
+        <state relative-caret-position="102">
+          <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -687,30 +687,6 @@
           <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="29" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/GameEngine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#7512#7513#0" expanded="true" />
-            <element signature="e#7543#7544#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/players/GoodGui.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="81" selection-start-line="81" selection-end-line="81" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5025#5026#0" expanded="true" />
-            <element signature="e#5058#5059#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -725,10 +701,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/GameEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="163" selection-start-line="163" selection-end-line="163" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#7512#7513#0" expanded="true" />
+            <element signature="e#7543#7544#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Scoring.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/deck/CardType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/players/GoodGui.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2091">
+          <caret line="141" column="10" selection-start-line="141" selection-start-column="10" selection-end-line="141" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#6257#6258#0" expanded="true" />
+            <element signature="e#6290#6291#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="35" column="37" lean-forward="true" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
+        <state relative-caret-position="291">
+          <caret line="34" column="29" lean-forward="true" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -47,6 +47,7 @@ public class Scoring {
     nigiriWasabi(allNames);
 
     //count puddings on the last round only (index starts at zero)
+
     if(round == 2) {
       countPudding(allNames);
     }

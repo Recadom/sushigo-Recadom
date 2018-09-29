@@ -69,6 +69,9 @@ public class GameEngine {
         deck = new CardDeck();
         deck.shuffle();
         pointMap = new HashMap<>();
+        for(String player : allNames) {
+            pointMap.put(player, 0);
+        }
         CircularLinkedList playerHands;
         cardsOnTable = new HashMap<>();
         for (String player : allNames) {
@@ -152,7 +155,12 @@ public class GameEngine {
             playerHands.head = playerHands.reverseList(playerHands.head);
 
             //tally current score
-            pointMap = Scoring.evaluateBoard(cardsOnTable, allNames, round);
+            HashMap<String, Integer> roundPointMap = new HashMap<>(Scoring.evaluateBoard(cardsOnTable, allNames, round));
+            for(String player : pointMap.keySet()) {
+                pointMap.put(player, pointMap.get(player) + roundPointMap.get(player));
+            }
+
+            //System.out.println(pointMap + "\n");
 
             //remove all but pudding
             for (List<CardType> playerTable : cardsOnTable.values()) {
