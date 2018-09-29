@@ -42,7 +42,7 @@ public class Scoring {
         countDumplings(player);
     }
 
-    countMaki(allNames);
+    //countMaki(allNames);
 
     nigiriWasabi(allNames);
 
@@ -107,8 +107,9 @@ public class Scoring {
    * @param allNames
    */
  static void nigiriWasabi(List<String> allNames) {
-   Stack<CardType> wasabis = new Stack<>();
+
    for (String player : allNames) {
+     Stack<CardType> wasabis = new Stack<>();
      int points = 0;
      for(CardType card : cardsOnTable.get(player)) {
         if (card == CardType.Wasabi) {

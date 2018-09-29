@@ -5,6 +5,7 @@ import com.company.deck.CardType;
 import com.company.deck.CircularLinkedList;
 import com.company.deck.Node;
 
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -198,16 +199,17 @@ public class GameEngine {
 
         //compare only the 1st place tie and check for most amount of pudding cards
         winners = leaderboard.get(((TreeMap<Integer, List<String>>) leaderboard).firstKey());
+
+
         int maxCnt = 0;
         String winner = winners.get(0);
         for (String player : winners) {
             int cnt = Collections.frequency(cardsOnTable.get(player), CardType.Pudding);
-        if (cnt > maxCnt) {
-            maxCnt = cnt;
-            winner = player;
-        }
+            if (cnt > maxCnt) {
+                maxCnt = cnt;
+                winner = player;
+            }
     }
-
         return winner;
     }
 
