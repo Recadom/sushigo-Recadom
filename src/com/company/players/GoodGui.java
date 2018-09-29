@@ -74,25 +74,16 @@ public class GoodGui implements Player {
     public List<CardType> giveCardsPlayed() {
         List<CardType> cardsPlayed = new ArrayList<>();
 
-        if (cards.size() == 0) {
+        if (cards.entrySet().size() == 0) {
             return null;
-        } else if (cards.size() == 1) {
-            cardsPlayed.add(cards.get(0));
-        } else {
-
-
-            if (currentTable.contains(CardType.Chopsticks)) {
-
-            }
         }
 
+        cardsPlayed.add(cards.lastEntry().getValue());
 
-        if (cards.size() > 1) {
-
+        if (cards.entrySet().size() > 1) {
+            cards.lastEntry().getValue();
         }
 
-
-        cardsPlayed.add(cards.get(0));
         return cardsPlayed;
     }
 

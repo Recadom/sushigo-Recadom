@@ -2,6 +2,8 @@ package com.company;
 import com.company.players.GUIPlayer;
 import com.company.players.GoodGui;
 import com.company.players.RandomPlayer;
+
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -31,11 +33,18 @@ public class Main {
         }
 
         //run 100 simulations
-        for(int i = 0; i < 1000; i++) {
+        final int SIMULATIONS = 1000;
+
+        for(int i = 0; i < SIMULATIONS; i++) {
             String winner = gameEngine.playGame();
             winsPerPlayer.put(winner, winsPerPlayer.get(winner) + 1);
         }
 
-        System.out.println(winsPerPlayer);
+        DecimalFormat df = new DecimalFormat("#");
+        for(String player : winsPerPlayer.keySet()) {
+            double winRate = (double) winsPerPlayer.get(player) / (double) SIMULATIONS * 100.0;
+            System.out.println(player + ": " + df.format(winRate));
+        }
+
     }
 }
