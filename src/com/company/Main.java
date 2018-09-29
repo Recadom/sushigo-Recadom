@@ -1,5 +1,6 @@
 package com.company;
 import com.company.players.GUIPlayer;
+import com.company.players.GoodGui;
 import com.company.players.RandomPlayer;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -16,7 +17,7 @@ import java.util.Map;
 public class Main {
     public static void main(String[] args) {
         List<Player> playerList = new ArrayList<>();
-        playerList.add(new RandomPlayer());
+        playerList.add(new GoodGui());
         playerList.add(new RandomPlayer());
         playerList.add(new RandomPlayer());
         playerList.add(new RandomPlayer());
@@ -30,7 +31,7 @@ public class Main {
         }
 
         //run 100 simulations
-        for(int i = 0; i < 100; i++) {
+        for(int i = 0; i < 1000; i++) {
             String winner = gameEngine.playGame();
             winsPerPlayer.put(winner, winsPerPlayer.get(winner) + 1);
         }
