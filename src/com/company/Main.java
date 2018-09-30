@@ -17,9 +17,9 @@ import java.util.Map;
 public class Main {
     public static void main(String[] args) {
         List<Player> playerList = new ArrayList<>();
-        //playerList.add(new GoodBot());
+        playerList.add(new GoodBot());
         //playerList.add(new UberBot());
-        playerList.add(new RandomPlayer());
+        //playerList.add(new RandomPlayer());
         playerList.add(new RandomPlayer());
         playerList.add(new RandomPlayer());
         playerList.add(new RandomPlayer());
@@ -33,7 +33,7 @@ public class Main {
         }
 
         //run 100 simulations
-        final int SIMULATIONS = 1000;
+        final int SIMULATIONS = 10000;
 
         for(int i = 0; i < SIMULATIONS; i++) {
             String winner = gameEngine.playGame();
@@ -48,3 +48,5 @@ public class Main {
 
     }
 }
+
+

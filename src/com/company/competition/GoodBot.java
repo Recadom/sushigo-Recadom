@@ -15,6 +15,7 @@ public class GoodBot implements Player {
     int playerIndex = 0;
     HashMap<CardType, Integer> cardValues = new HashMap<>();
     int round = 0;
+    int unusedWasabi = 0;
 
 
     /**
@@ -38,17 +39,18 @@ public class GoodBot implements Player {
         List<String> allPlayerNames = new ArrayList<>();
         List<CardType> cards = new LinkedList<>();
         currentTable = new ArrayList<>();
+        unusedWasabi = 0;
 
         cardValues.put(CardType.Tempura, 25);
         cardValues.put(CardType.Sashimi, 20);
-        cardValues.put(CardType.Dumpling, 0);
+        cardValues.put(CardType.Dumpling, 25);
         cardValues.put(CardType.MakiRollOne, 20);
         cardValues.put(CardType.MakiRollTwo, 30);
         cardValues.put(CardType.MakiRollThree, 40);
         cardValues.put(CardType.EggNigiri, 10);
         cardValues.put(CardType.SalmonNigiri, 15);
         cardValues.put(CardType.SquidNigiri, 20);
-        cardValues.put(CardType.Pudding, 10);
+        cardValues.put(CardType.Pudding, 30);
         cardValues.put(CardType.Wasabi, 91);
         cardValues.put(CardType.Chopsticks, 80);
     }
@@ -87,9 +89,6 @@ public class GoodBot implements Player {
             cardValues.put(CardType.EggNigiri, 10);
         }
 
-        if(currentTable.contains(CardType.Chopsticks)) {
-
-        }
 
         if(currentTable.contains(CardType.Tempura)) {
             cardValues.put(CardType.Tempura, 50);
@@ -128,18 +127,48 @@ public class GoodBot implements Player {
             return null;
         }
 
-        cardsPlayed.add(cards.lastEntry().getValue());
-        cards.remove(cards.lastKey());
+        if (currentTable.contains(CardType.Chopsticks) && cards.entrySet().size() > 2) {
 
-        if (currentTable.contains(CardType.Chopsticks) && cards.entrySet().size() > 1) {
+            CardType nigiri = containsNigiri(cards.values());
+            if((cards.values().contains(CardType.Wasabi) || unusedWasabi > 0) && nigiri != null) {
+                cardsPlayed.add(CardType.Wasabi);
+                cardsPlayed.add(nigiri);
+                currentTable.remove(CardType.Chopsticks);
+            } else if(Collections.frequency(cards.values(), CardType.Tempura) / 2 > 0) {
+                cardsPlayed.add(CardType.Tempura);
+                cardsPlayed.add(CardType.Tempura);
+            } else {
+                cardsPlayed.add(cards.lastEntry().getValue());
+            }
+        } else if (cards.entrySet().size() == 2) {
+                cardsPlayed.add(cards.remove(cards.lastEntry().getKey()));
+                //cards.remove(cards.lastKey());
+                cardsPlayed.add(cards.lastEntry().getValue());
+
+                currentTable.remove(CardType.Chopsticks);
+        } else {
             cardsPlayed.add(cards.lastEntry().getValue());
-            currentTable.remove(CardType.Chopsticks);
+            //cards.remove(cards.lastKey());
         }
 
 
 
         //System.out.println(cardsPlayed);
         return cardsPlayed;
+    }
+
+
+    public CardType containsNigiri(Collection<CardType> cards) {
+        if(cards.contains(CardType.SquidNigiri)) {
+            return CardType.SquidNigiri;
+        }
+        if(cards.contains(CardType.SalmonNigiri)) {
+            return CardType.SalmonNigiri;
+        }
+        if(cards.contains(CardType.EggNigiri)) {
+            return CardType.EggNigiri;
+        }
+        return null;
     }
 
 

@@ -15,6 +15,8 @@ public class UberBot implements Player {
     int playerIndex = 0;
     int round = 0;
     List<TurnResult> prevTurn = new ArrayList<>();
+    boolean gameOver;
+    boolean wonGame;
 
 
     public void init(String name, List<String> allNames) {
@@ -26,6 +28,8 @@ public class UberBot implements Player {
      * Called at the start of every new game.
      */
     public void newGame() {
+        gameOver = false;
+        wonGame = false;
         String playerName = new String();
         List<String> allPlayerNames = new ArrayList<>();
         List<CardType> cards = new LinkedList<>();
@@ -116,7 +120,8 @@ public class UberBot implements Player {
                 winner = player;
             }
         }
-        System.out.println(winner);
+        boolean gameOver = true;
+        boolean wonGame = winner.equals(playerName);
     }
 
     /**
@@ -125,5 +130,4 @@ public class UberBot implements Player {
     public String getName() {
         return playerName;
     }
-
 }
