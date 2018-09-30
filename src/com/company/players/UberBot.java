@@ -1,4 +1,4 @@
-package com.company.competition;
+package com.company.players;
 
 import com.company.deck.CardType;
 import com.company.Player;

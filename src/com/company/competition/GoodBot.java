@@ -4,6 +4,7 @@ import com.company.deck.CardType;
 import com.company.Player;
 import com.company.TurnResult;
 
+import java.lang.reflect.Array;
 import java.util.*;
 
 public class GoodBot implements Player {
@@ -12,6 +13,7 @@ public class GoodBot implements Player {
     private TreeMap<Integer, CardType> cards;
     List<List<TurnResult>> allTurns = new ArrayList<>();
     List<CardType> currentTable;
+    ArrayList<CardType> possibleCards;
     int playerIndex = 0;
     HashMap<CardType, Integer> cardValues = new HashMap<>();
     int round = 0;
@@ -32,15 +34,17 @@ public class GoodBot implements Player {
     }
 
     /**
-     * Called at the start of every new game.
+     * Called at the start of every new game. Prepares the variables.
      */
     public void newGame() {
         String playerName = new String();
         List<String> allPlayerNames = new ArrayList<>();
         List<CardType> cards = new LinkedList<>();
+        possibleCards = new ArrayList<>();
         currentTable = new ArrayList<>();
         unusedWasabi = 0;
 
+        //initialize a map of cards to their associated value
         cardValues.put(CardType.Tempura, 25);
         cardValues.put(CardType.Sashimi, 20);
         cardValues.put(CardType.Dumpling, 25);
@@ -60,25 +64,13 @@ public class GoodBot implements Player {
      * @param cards List of cards that represent the player's hand for this turn.
      */
     public void receiveHand(List<CardType> cards) {
-        if(currentTable.contains(CardType.SquidNigiri)) {
-            currentTable.remove(CardType.Wasabi);
-            currentTable.remove(CardType.SquidNigiri);
-        }
-        if(currentTable.contains(CardType.SalmonNigiri)) {
-            currentTable.remove(CardType.Wasabi);
-            currentTable.remove(CardType.SalmonNigiri);
-        }
-        if(currentTable.contains(CardType.EggNigiri)) {
-            currentTable.remove(CardType.Wasabi);
-            currentTable.remove(CardType.EggNigiri);
-        }
-
 
         cardValues.put(CardType.Wasabi, 91 - round * 10);
         cardValues.put(CardType.Chopsticks, 90 - round * 10);
         cardValues.put(CardType.Sashimi, 20 - round * 2);
 
-        if(currentTable.contains(CardType.Wasabi)) {
+        //make wasabi nigiri pairs more likely
+        if(unusedWasabi > 0) {
             cardValues.put(CardType.EggNigiri, 60);
             cardValues.put(CardType.SalmonNigiri, 70);
             cardValues.put(CardType.SquidNigiri, 90);
@@ -89,7 +81,7 @@ public class GoodBot implements Player {
             cardValues.put(CardType.EggNigiri, 10);
         }
 
-
+        //make tempura pairs more likely
         if(currentTable.contains(CardType.Tempura)) {
             cardValues.put(CardType.Tempura, 50);
         }
@@ -97,13 +89,25 @@ public class GoodBot implements Player {
             cardValues.put(CardType.Tempura, 25);
         }
 
+        //reduce the value of maki rolls once some are already on the table
         if(currentTable.contains(CardType.MakiRollOne) || currentTable.contains(CardType.MakiRollTwo) || currentTable.contains(CardType.MakiRollThree)) {
             cardValues.put(CardType.MakiRollOne, 10);
             cardValues.put(CardType.MakiRollTwo, 15);
             cardValues.put(CardType.MakiRollThree, 20);
         }
 
-        this.cards = new TreeMap<Integer, CardType>();
+
+        //set up a list of possible cards and lower wasabi value if there is no nigiri
+        if(round < 4) {
+            possibleCards.addAll(cards);
+        } else {
+            if(containsNigiri(possibleCards) == null) {
+                cardValues.put(CardType.Wasabi, 0);
+            }
+        }
+
+        //sort the values of the current hand into a treemap
+        this.cards = new TreeMap<>();
         for (CardType card : cards) {
             this.cards.put(cardValues.get(card), card);
         }
@@ -121,43 +125,55 @@ public class GoodBot implements Player {
      */
     public List<CardType> giveCardsPlayed() {
         List<CardType> cardsPlayed = new ArrayList<>();
-        //System.out.println(cards.entrySet());
 
         if (cards.entrySet().size() == 0) {
             return null;
         }
-
+        // Check for 2-card combinations
         if (currentTable.contains(CardType.Chopsticks) && cards.entrySet().size() > 2) {
-
             CardType nigiri = containsNigiri(cards.values());
-            if((cards.values().contains(CardType.Wasabi) || unusedWasabi > 0) && nigiri != null) {
+
+            //if there is a nigiri-wasabi pair, use it
+            if((cards.values().contains(CardType.Wasabi)) && nigiri != null) {
                 cardsPlayed.add(CardType.Wasabi);
                 cardsPlayed.add(nigiri);
                 currentTable.remove(CardType.Chopsticks);
-            } else if(Collections.frequency(cards.values(), CardType.Tempura) / 2 > 0) {
+            }
+            //if there is a tempura pair, use it
+            else if(Collections.frequency(cards.values(), CardType.Tempura) / 2 > 0) {
                 cardsPlayed.add(CardType.Tempura);
                 cardsPlayed.add(CardType.Tempura);
             } else {
+                //only play one card if there are no good pairs with chopsticks
                 cardsPlayed.add(cards.lastEntry().getValue());
             }
-        } else if (cards.entrySet().size() == 2) {
+        }
+        //play the last two cards to use up chopsticks
+        else if (cards.entrySet().size() == 2 && currentTable.contains(CardType.Chopsticks)) {
                 cardsPlayed.add(cards.remove(cards.lastEntry().getKey()));
-                //cards.remove(cards.lastKey());
                 cardsPlayed.add(cards.lastEntry().getValue());
-
                 currentTable.remove(CardType.Chopsticks);
-        } else {
+        }
+        //play the highest value card if there are no chopsticks
+        else {
             cardsPlayed.add(cards.lastEntry().getValue());
-            //cards.remove(cards.lastKey());
         }
 
+        //calculate how many unused wasabi there are on the table
+        if(cardsPlayed.contains(CardType.Wasabi) && containsNigiri(cardsPlayed) == null) {
+            ++unusedWasabi;
+        } else if(!cardsPlayed.contains(CardType.Wasabi) && containsNigiri(cardsPlayed) != null) {
+            unusedWasabi = Math.max(--unusedWasabi, 0);
+        }
 
-
-        //System.out.println(cardsPlayed);
         return cardsPlayed;
     }
 
-
+    /**
+     * Counts and finds the highest value nigiri in a collection of cards
+     * @param cards a collection of cards
+     * @return highest value nigiri card, null if none are in the collection
+     */
     public CardType containsNigiri(Collection<CardType> cards) {
         if(cards.contains(CardType.SquidNigiri)) {
             return CardType.SquidNigiri;
@@ -178,6 +194,7 @@ public class GoodBot implements Player {
      * @param pointMap Map of player names to points at the end of the round.
      */
     public void endRound(Map<String, Integer> pointMap) {
+        possibleCards = new ArrayList<>();
         round = 0;
     }
 
@@ -187,13 +204,20 @@ public class GoodBot implements Player {
      * @param turnResults List of the turn results containing the actions of each player during that turn.
      */
     public void receiveTurnResults(List<TurnResult> turnResults) {
-        //turnResults.add(new TurnResult(player.getName(),currentCardPlay, cardsOnTable.get(player.getName())));
         allTurns.add(turnResults);
 
+        //determine the index of the player
         for (int i = 0; i < turnResults.size(); i++) {
             TurnResult turn = turnResults.get(i);
             if (turn.getPlayerName().equals(playerName)) {
                 playerIndex = i;
+            }
+        }
+
+        //remove the played cards from the possible card list
+        for(TurnResult result : turnResults) {
+            for (CardType card: result.getCardsPlayed()) {
+                possibleCards.remove(card);
             }
         }
 

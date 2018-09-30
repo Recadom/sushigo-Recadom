@@ -1,6 +1,5 @@
 package com.company;
 import com.company.competition.GoodBot;
-import com.company.competition.UberBot;
 import com.company.players.RandomPlayer;
 
 import java.text.DecimalFormat;
