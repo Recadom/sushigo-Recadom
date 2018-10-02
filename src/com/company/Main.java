@@ -1,6 +1,7 @@
 package com.company;
 import com.company.competition.GoodBot;
 import com.company.players.RandomPlayer;
+import com.company.players.GUIPlayer;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -32,7 +33,7 @@ public class Main {
         }
 
         //run 100 simulations
-        final int SIMULATIONS = 10000;
+        final int SIMULATIONS = 1000;
 
         for(int i = 0; i < SIMULATIONS; i++) {
             String winner = gameEngine.playGame();
