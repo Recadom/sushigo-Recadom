@@ -1,7 +1,5 @@
 package com.company;
-import com.company.competition.GoodBot;
 import com.company.players.RandomPlayer;
-import com.company.players.GUIPlayer;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -17,10 +15,11 @@ import java.util.Map;
 public class Main {
     public static void main(String[] args) {
         List<Player> playerList = new ArrayList<>();
-        playerList.add(new GoodBot());
+        //playerList.add(new GoodBot());
+
         //playerList.add(new UberBot());
-        //playerList.add(new RandomPlayer());
         playerList.add(new RandomPlayer());
+        //playerList.add(new RandomPlayer());
         playerList.add(new RandomPlayer());
         playerList.add(new RandomPlayer());
         //playerList.add(new GUIPlayer());

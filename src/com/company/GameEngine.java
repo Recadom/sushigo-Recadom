@@ -5,7 +5,6 @@ import com.company.deck.CardType;
 import com.company.deck.CircularLinkedList;
 import com.company.deck.Node;
 
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -108,8 +107,10 @@ public class GameEngine {
                     if(cardsOnTable.get(player.getName()).contains(CardType.Chopsticks)) {
 
                         //remove cards used from hand
-                        playerHand.data.remove(currentCardPlay.get(0));
-                        if(currentCardPlay.size() > 1) {
+                        if(currentCardPlay != null && !currentCardPlay.isEmpty()) {
+                            playerHand.data.remove(currentCardPlay.get(0));
+                        }
+                        if(currentCardPlay != null && currentCardPlay.size() > 1) {
                             playerHand.data.remove(currentCardPlay.get(1));
 
                             //remove chopsticks and place into hand for next round
@@ -117,7 +118,7 @@ public class GameEngine {
                             cardsOnTable.get(player.getName()).remove(CardType.Chopsticks);
                         }
                         //add cards to table
-                        if (currentCardPlay.size() == 1 || currentCardPlay.size() == 2) {
+                        if (currentCardPlay != null && (currentCardPlay.size() == 1 || currentCardPlay.size() == 2)) {
                             cardsOnTable.get(player.getName()).addAll(currentCardPlay);
                         }
 

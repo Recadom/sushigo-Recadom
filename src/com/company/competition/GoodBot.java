@@ -12,7 +12,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
-//import java.util.*;
 
 public class GoodBot implements Player {
     private String playerName;
@@ -223,8 +222,10 @@ public class GoodBot implements Player {
 
         //remove the played cards from the possible card list
         for(TurnResult result : turnResults) {
-            for (CardType card: result.getCardsPlayed()) {
-                possibleCards.remove(card);
+            if(result.getCardsPlayed() != null) {
+                for (CardType card : result.getCardsPlayed()) {
+                    possibleCards.remove(card);
+                }
             }
         }
 
@@ -243,7 +244,7 @@ public class GoodBot implements Player {
      * Returns the name of this player strategy  .
      */
     public String getName() {
-        return playerName;
+        return "GoodBot";
     }
 
 }
