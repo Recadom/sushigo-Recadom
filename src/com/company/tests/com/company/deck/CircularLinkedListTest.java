@@ -2,9 +2,10 @@ package com.company.deck;
 
 import static org.junit.Assert.*;
 
+import com.company.CardType;
+import com.company.CircularLinkedList;
 import java.util.ArrayList;
 import java.util.List;
-import javax.swing.border.BevelBorder;
 import org.junit.Before;
 import org.junit.Test;
 

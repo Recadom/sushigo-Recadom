@@ -2,7 +2,7 @@ package com.company.competition;
 
 import com.company.Player;
 import com.company.TurnResult;
-import com.company.deck.CardType;
+import com.company.CardType;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -160,12 +160,12 @@ public class GoodBot implements Player {
                 cardsPlayed.add(cards.lastEntry().getValue());
                 currentTable.remove(CardType.Chopsticks);
         }
-        //play the highest value card if there are no chopsticks
+        //play the highest value card if there are no chopsticks todo make sure only 2 cards are played when chopsticks
         else {
             cardsPlayed.add(cards.lastEntry().getValue());
         }
 
-        //calculate how many unused wasabi there are on the table
+        //calculate how many unused wasabi there are on the table todo add check for sashimi as well
         if(cardsPlayed.contains(CardType.Wasabi) && containsNigiri(cardsPlayed) == null) {
             ++unusedWasabi;
         } else if(!cardsPlayed.contains(CardType.Wasabi) && containsNigiri(cardsPlayed) != null) {
@@ -245,6 +245,7 @@ public class GoodBot implements Player {
      */
     public String getName() {
         return "GoodBot";
+        //return playerName;
     }
 
 }

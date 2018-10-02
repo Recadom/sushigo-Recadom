@@ -1,5 +1,5 @@
-import com.company.deck.CardDeck;
-import com.company.deck.CardType;
+import com.company.CardDeck;
+import com.company.CardType;
 
 import static org.junit.Assert.*;
 

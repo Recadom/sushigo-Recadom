@@ -1,4 +1,6 @@
 package com.company;
+
+import com.company.competition.GoodBot;
 import com.company.players.RandomPlayer;
 
 import java.text.DecimalFormat;
@@ -18,9 +20,10 @@ public class Main {
         //playerList.add(new GoodBot());
 
         //playerList.add(new UberBot());
+        playerList.add(new GoodBot());
+        playerList.add(new RandomPlayer());
         playerList.add(new RandomPlayer());
         //playerList.add(new RandomPlayer());
-        playerList.add(new RandomPlayer());
         playerList.add(new RandomPlayer());
         //playerList.add(new GUIPlayer());
 
@@ -32,7 +35,7 @@ public class Main {
         }
 
         //run 100 simulations
-        final int SIMULATIONS = 1000;
+        final int SIMULATIONS = 10000;
 
         for(int i = 0; i < SIMULATIONS; i++) {
             String winner = gameEngine.playGame();

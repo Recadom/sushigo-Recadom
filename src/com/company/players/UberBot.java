@@ -1,6 +1,6 @@
 package com.company.players;
 
-import com.company.deck.CardType;
+import com.company.CardType;
 import com.company.Player;
 import com.company.TurnResult;
 

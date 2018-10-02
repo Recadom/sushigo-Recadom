@@ -1,6 +1,5 @@
 package com.company;
 
-import com.company.deck.CardType;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;

@@ -1,7 +1,7 @@
 import com.company.GameEngine;
 import com.company.Player;
-import com.company.deck.CardDeck;
-import com.company.deck.CardType;
+import com.company.CardDeck;
+import com.company.CardType;
 import com.company.players.RandomPlayer;
 import org.junit.Test;
 

@@ -2,8 +2,6 @@ package com.company;
 
 import static org.junit.Assert.*;
 
-import com.company.deck.CardDeck;
-import com.company.deck.CardType;
 import com.company.players.RandomPlayer;
 import java.util.ArrayList;
 import java.util.Arrays;

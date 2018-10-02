@@ -1,4 +1,4 @@
-package com.company.deck;
+package com.company;
 
 /**
  * CardType enum to represent cards in the game. Feel free to make other CardType classes in your implementation of
