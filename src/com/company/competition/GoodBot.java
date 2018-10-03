@@ -135,6 +135,8 @@ public class GoodBot implements Player {
         if (cards.entrySet().size() == 0) {
             return null;
         }
+        System.out.println(round);
+        System.out.println(currentTable.toString());
         // Check for 2-card combinations
         if (currentTable.contains(CardType.Chopsticks) && cards.entrySet().size() > 2) {
             CardType nigiri = containsNigiri(cards.values());
@@ -246,7 +248,8 @@ public class GoodBot implements Player {
      * Returns the name of this player strategy  .
      */
     public String getName() {
-        return "GoodBot";
-    }
+        return playerName;
+        //return "GoodBot";
+    } //todo change
 
 }

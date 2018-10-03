@@ -125,6 +125,11 @@ public class GameEngine {
                     } else {
                         if(currentCardPlay != null) {
                             playerHand.data.remove(currentCardPlay.get(0));
+                            if(currentCardPlay.size() > 1) {
+                                System.out.println(currentCardPlay.toString());
+                                System.out.println("---------- " + cardsOnTable.get(player.getName()) + " ---------");
+                                System.out.println("END ERROR\n\n\n\n\n");
+                            }
                             cardsOnTable.get(player.getName()).add(currentCardPlay.get(0));
                         }
                     }
