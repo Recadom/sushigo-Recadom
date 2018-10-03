@@ -1,0 +1,1 @@
+Please do not use System.in, System.out, or System.err in your code. Our new class validator is not sophisticated enough yet to ignore this in a comment so please remove them entirely.
