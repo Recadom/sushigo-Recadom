@@ -253,12 +253,12 @@ public class GoodBot implements Player {
      * Returns the name of this player strategy  .
      */
     public String getName() {
-        if(playerName == null) {
-            return "GoodBot";
-        }
-        else
-            return playerName;
-        //return "GoodBot";
+        //if(playerName == null) {
+        return "GoodBot";
+//        }
+//        else
+//            return playerName;
+//        //return "GoodBot";
     }
 
     public HashMap<CardType, Integer> getCardValues() {
