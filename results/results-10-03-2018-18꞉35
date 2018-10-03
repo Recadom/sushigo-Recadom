@@ -1,0 +1,141 @@
+SUSHI GO RESULTS
+SUSHI GO PLAYER: Player #1: GoodBot
+
+
+RESULTS AGAINST BASELINE STRATEGIES
+BASELINE STRATEGY: Random Player
+MINIMUM WINS AGAINST THIS STRATEGY: 7
+WHOOPS! LOOKS LIKE YOUR STRATEGY LOST AGAINST THIS STRATEGY
+YOUR STRATEGY WON 5 TIMES
+YOUR STRATEGY LOST 5 TIMES
+
+BASELINE STRATEGY: Alexandrei Mackakovich
+MINIMUM WINS AGAINST THIS STRATEGY: 7
+WHOOPS! LOOKS LIKE YOUR STRATEGY LOST AGAINST THIS STRATEGY
+YOUR STRATEGY WON 0 TIMES
+YOUR STRATEGY LOST 10 TIMES
+
+
+
+BASELINE STRATEGY: Random Player
+MATCH #1
+                                Player #1: GoodBot   42
+                          Player #2: Random Player   25
+                          Player #4: Random Player   22
+                          Player #3: Random Player   20
+
+MATCH #2
+                                Player #1: GoodBot   55
+                          Player #3: Random Player   27
+                          Player #2: Random Player   23
+                          Player #4: Random Player   19
+
+MATCH #3
+                          Player #4: Random Player   43
+                                Player #1: GoodBot   31
+                          Player #3: Random Player   25
+                          Player #2: Random Player   23
+
+MATCH #4
+                                Player #1: GoodBot   43
+                          Player #2: Random Player   20
+                          Player #3: Random Player   19
+                          Player #4: Random Player   12
+
+MATCH #5
+                                Player #1: GoodBot   44
+                          Player #3: Random Player   37
+                          Player #2: Random Player   30
+                          Player #4: Random Player   16
+
+MATCH #6
+                          Player #3: Random Player   46
+                                Player #1: GoodBot   38
+                          Player #2: Random Player   22
+                          Player #4: Random Player   11
+
+MATCH #7
+                          Player #2: Random Player   34
+                                Player #1: GoodBot   32
+                          Player #4: Random Player   31
+                          Player #3: Random Player   30
+
+MATCH #8
+                          Player #2: Random Player   27
+                                Player #1: GoodBot   25
+                          Player #3: Random Player   21
+                          Player #4: Random Player   19
+
+MATCH #9
+                          Player #2: Random Player   30
+                          Player #4: Random Player   29
+                          Player #3: Random Player   26
+                                Player #1: GoodBot   25
+
+MATCH #10
+                                Player #1: GoodBot   48
+                          Player #3: Random Player   48
+                          Player #2: Random Player   29
+                          Player #4: Random Player   15
+
+BASELINE STRATEGY: Alexandrei Mackakovich
+MATCH #1
+                 Player #2: Alexandrei Mackakovich   46
+                                Player #1: GoodBot   29
+                          Player #3: Random Player   27
+                          Player #4: Random Player   24
+
+MATCH #2
+                 Player #2: Alexandrei Mackakovich   62
+                                Player #1: GoodBot   29
+                          Player #3: Random Player   28
+                          Player #4: Random Player   15
+
+MATCH #3
+                 Player #2: Alexandrei Mackakovich   53
+                                Player #1: GoodBot   26
+                          Player #3: Random Player   26
+                          Player #4: Random Player   23
+
+MATCH #4
+                 Player #2: Alexandrei Mackakovich   52
+                          Player #4: Random Player   33
+                                Player #1: GoodBot   29
+                          Player #3: Random Player   28
+
+MATCH #5
+                 Player #2: Alexandrei Mackakovich   44
+                                Player #1: GoodBot   40
+                          Player #4: Random Player   15
+                          Player #3: Random Player   13
+
+MATCH #6
+                 Player #2: Alexandrei Mackakovich   54
+                                Player #1: GoodBot   49
+                          Player #3: Random Player   25
+                          Player #4: Random Player    6
+
+MATCH #7
+                 Player #2: Alexandrei Mackakovich   47
+                          Player #4: Random Player   27
+                                Player #1: GoodBot   21
+                          Player #3: Random Player   21
+
+MATCH #8
+                 Player #2: Alexandrei Mackakovich   51
+                                Player #1: GoodBot   33
+                          Player #3: Random Player   24
+                          Player #4: Random Player   10
+
+MATCH #9
+                 Player #2: Alexandrei Mackakovich   47
+                          Player #4: Random Player   27
+                                Player #1: GoodBot   18
+                          Player #3: Random Player   18
+
+MATCH #10
+                 Player #2: Alexandrei Mackakovich   49
+                          Player #3: Random Player   31
+                                Player #1: GoodBot   28
+                          Player #4: Random Player   19
+
