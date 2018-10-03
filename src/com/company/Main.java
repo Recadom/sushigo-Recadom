@@ -1,5 +1,4 @@
 package com.company;
-
 import com.company.competition.GoodBot;
 import com.company.players.RandomPlayer;
 
@@ -17,13 +16,12 @@ import java.util.Map;
 public class Main {
     public static void main(String[] args) {
         List<Player> playerList = new ArrayList<>();
-        //playerList.add(new GoodBot());
+        playerList.add(new GoodBot());
 
         //playerList.add(new UberBot());
-        playerList.add(new GoodBot());
-        playerList.add(new RandomPlayer());
         playerList.add(new RandomPlayer());
         //playerList.add(new RandomPlayer());
+        playerList.add(new RandomPlayer());
         playerList.add(new RandomPlayer());
         //playerList.add(new GUIPlayer());
 
@@ -35,7 +33,7 @@ public class Main {
         }
 
         //run 100 simulations
-        final int SIMULATIONS = 10000;
+        final int SIMULATIONS = 100;
 
         for(int i = 0; i < SIMULATIONS; i++) {
             String winner = gameEngine.playGame();

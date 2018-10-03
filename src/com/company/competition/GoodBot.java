@@ -2,7 +2,7 @@ package com.company.competition;
 
 import com.company.Player;
 import com.company.TurnResult;
-import com.company.CardType;
+import com.company.deck.CardType;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -135,6 +135,8 @@ public class GoodBot implements Player {
         if (cards.entrySet().size() == 0) {
             return null;
         }
+        System.out.println(round);
+        System.out.println(currentTable.toString());
         // Check for 2-card combinations
         if (currentTable.contains(CardType.Chopsticks) && cards.entrySet().size() > 2) {
             CardType nigiri = containsNigiri(cards.values());
@@ -160,12 +162,12 @@ public class GoodBot implements Player {
                 cardsPlayed.add(cards.lastEntry().getValue());
                 currentTable.remove(CardType.Chopsticks);
         }
-        //play the highest value card if there are no chopsticks todo make sure only 2 cards are played when chopsticks
+        //play the highest value card if there are no chopsticks
         else {
             cardsPlayed.add(cards.lastEntry().getValue());
         }
 
-        //calculate how many unused wasabi there are on the table todo add check for sashimi as well
+        //calculate how many unused wasabi there are on the table
         if(cardsPlayed.contains(CardType.Wasabi) && containsNigiri(cardsPlayed) == null) {
             ++unusedWasabi;
         } else if(!cardsPlayed.contains(CardType.Wasabi) && containsNigiri(cardsPlayed) != null) {
@@ -220,6 +222,8 @@ public class GoodBot implements Player {
             }
         }
 
+        //todo determine if playing against string ending in "Random Player" or other, change strat based on that
+
         //remove the played cards from the possible card list
         for(TurnResult result : turnResults) {
             if(result.getCardsPlayed() != null) {
@@ -244,8 +248,8 @@ public class GoodBot implements Player {
      * Returns the name of this player strategy  .
      */
     public String getName() {
-        return "GoodBot";
-        //return playerName;
-    }
+        return playerName;
+        //return "GoodBot";
+    } //todo change
 
 }
