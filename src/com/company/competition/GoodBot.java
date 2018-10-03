@@ -2,7 +2,7 @@ package com.company.competition;
 
 import com.company.Player;
 import com.company.TurnResult;
-import com.company.deck.CardType;
+import com.company.CardType;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -87,6 +87,10 @@ public class GoodBot implements Player {
             cardValues.put(CardType.EggNigiri, 10);
         }
 
+        if(currentTable == null) {
+            return;
+        }
+
         //make tempura pairs more likely
         if(currentTable.contains(CardType.Tempura)) {
             cardValues.put(CardType.Tempura, 50);
@@ -132,7 +136,7 @@ public class GoodBot implements Player {
     public List<CardType> giveCardsPlayed() {
         List<CardType> cardsPlayed = new ArrayList<>();
 
-        if (cards.entrySet().size() == 0) {
+        if (cards == null || cards.entrySet().size() == 0) {
             return null;
         }
         System.out.println(round);
@@ -228,7 +232,8 @@ public class GoodBot implements Player {
         for(TurnResult result : turnResults) {
             if(result.getCardsPlayed() != null) {
                 for (CardType card : result.getCardsPlayed()) {
-                    possibleCards.remove(card);
+                    if(possibleCards != null)
+                        possibleCards.remove(card);
                 }
             }
         }
@@ -248,8 +253,15 @@ public class GoodBot implements Player {
      * Returns the name of this player strategy  .
      */
     public String getName() {
-        return playerName;
+        if(playerName == null) {
+            return "GoodBot";
+        }
+        else
+            return playerName;
         //return "GoodBot";
-    } //todo change
+    }
 
+    public HashMap<CardType, Integer> getCardValues() {
+        return cardValues;
+    }
 }
