@@ -1,0 +1,143 @@
+SUSHI GO RESULTS
+SUSHI GO PLAYER: Player #1: GoodBot
+
+
+RESULTS AGAINST BASELINE STRATEGIES
+BASELINE STRATEGY: Random Player
+MINIMUM WINS AGAINST THIS STRATEGY: 7
+CONGRATULATIONS! YOU HAVE DEFEATED THIS STRATEGY!
+YOUR STRATEGY WON 7 TIMES
+YOUR STRATEGY LOST 3 TIMES
+
+BASELINE STRATEGY: Alexandrei Mackakovich
+MINIMUM WINS AGAINST THIS STRATEGY: 7
+WHOOPS! LOOKS LIKE YOUR STRATEGY LOST AGAINST THIS STRATEGY
+YOUR STRATEGY WON 0 TIMES
+YOUR STRATEGY LOST 10 TIMES
+
+
+
+BASELINE STRATEGY: Random Player
+MATCH #1
+                                Player #1: GoodBot   54
+                          Player #2: Random Player   29
+                          Player #4: Random Player   25
+                          Player #3: Random Player    5
+
+MATCH #2
+                          Player #2: Random Player   38
+                          Player #4: Random Player   33
+                                Player #1: GoodBot   26
+                          Player #3: Random Player   26
+
+MATCH #3
+                                Player #1: GoodBot   52
+                          Player #4: Random Player   40
+                          Player #3: Random Player   34
+                          Player #2: Random Player   15
+
+MATCH #4
+                                Player #1: GoodBot   44
+                          Player #2: Random Player   40
+                          Player #4: Random Player   30
+                          Player #3: Random Player   21
+
+MATCH #5
+                          Player #2: Random Player   39
+                                Player #1: GoodBot   30
+                          Player #3: Random Player   26
+                          Player #4: Random Player   18
+
+MATCH #6
+                                Player #1: GoodBot   36
+                          Player #2: Random Player   35
+                          Player #3: Random Player   30
+                          Player #4: Random Player   26
+
+MATCH #7
+                                Player #1: GoodBot   52
+                          Player #4: Random Player   30
+                          Player #3: Random Player   20
+                          Player #2: Random Player   14
+
+MATCH #8
+                                Player #1: GoodBot   48
+                          Player #2: Random Player   29
+                          Player #3: Random Player   27
+                          Player #4: Random Player   11
+
+MATCH #9
+                          Player #2: Random Player   44
+                          Player #3: Random Player   32
+                          Player #4: Random Player   31
+                                Player #1: GoodBot   18
+
+MATCH #10
+                                Player #1: GoodBot   33
+                          Player #2: Random Player   26
+                          Player #4: Random Player   20
+                          Player #3: Random Player   15
+
+BASELINE STRATEGY: Alexandrei Mackakovich
+MATCH #1
+                 Player #2: Alexandrei Mackakovich   46
+                                Player #1: GoodBot   31
+                          Player #4: Random Player   27
+                          Player #3: Random Player   26
+
+MATCH #2
+                 Player #2: Alexandrei Mackakovich   53
+                          Player #3: Random Player   29
+                                Player #1: GoodBot   28
+                          Player #4: Random Player   26
+
+MATCH #3
+                 Player #2: Alexandrei Mackakovich   56
+                                Player #1: GoodBot   33
+                          Player #4: Random Player   30
+                          Player #3: Random Player   18
+
+MATCH #4
+                 Player #2: Alexandrei Mackakovich   61
+                                Player #1: GoodBot   26
+                          Player #4: Random Player   23
+                          Player #3: Random Player   15
+
+MATCH #5
+                 Player #2: Alexandrei Mackakovich   46
+                                Player #1: GoodBot   32
+                          Player #4: Random Player   25
+                          Player #3: Random Player   12
+
+MATCH #6
+                 Player #2: Alexandrei Mackakovich   53
+                          Player #4: Random Player   24
+                                Player #1: GoodBot   19
+                          Player #3: Random Player   16
+
+MATCH #7
+                 Player #2: Alexandrei Mackakovich   43
+                                Player #1: GoodBot   41
+                          Player #4: Random Player   26
+                          Player #3: Random Player   18
+
+MATCH #8
+                 Player #2: Alexandrei Mackakovich   70
+                                Player #1: GoodBot   39
+                          Player #4: Random Player   15
+                          Player #3: Random Player   14
+
+MATCH #9
+                 Player #2: Alexandrei Mackakovich   51
+                          Player #4: Random Player   24
+                          Player #3: Random Player   21
+                                Player #1: GoodBot   12
+
+MATCH #10
+competition.exceptions.CheatingException: GoodBot, Your Player played two cards without chopsticks
+	at com.company.GameEngine.playTurn(GameEngine.java:204)
+	at com.company.GameEngine.playGame(GameEngine.java:48)
+	at competition.engine.BaselineEngine.runBaselineForPlayer(BaselineEngine.java:47)
+	at competition.CompetitionMain.runBaselineCode(CompetitionMain.java:229)
+	at competition.CompetitionMain.main(CompetitionMain.java:54)
+
