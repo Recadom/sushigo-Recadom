@@ -220,6 +220,8 @@ public class GoodBot implements Player {
             }
         }
 
+        //todo determine if playing against string ending in "Random Player" or other, change strat based on that
+
         //remove the played cards from the possible card list
         for(TurnResult result : turnResults) {
             if(result.getCardsPlayed() != null) {
