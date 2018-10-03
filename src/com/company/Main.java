@@ -33,7 +33,7 @@ public class Main {
         }
 
         //run 100 simulations
-        final int SIMULATIONS = 100;
+        final int SIMULATIONS = 10000;
 
         for(int i = 0; i < SIMULATIONS; i++) {
             String winner = gameEngine.playGame();

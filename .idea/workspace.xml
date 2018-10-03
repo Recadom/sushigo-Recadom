@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="74e08c6c-515f-46d2-900d-aaec62aae178" name="Default" comment="added todo">
-      <change afterPath="$PROJECT_DIR$/src/com/company/tests/com/company/competition/GoodBotTest.java" afterDir="false" />
+    <list default="true" id="74e08c6c-515f-46d2-900d-aaec62aae178" name="Default" comment="added tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/GameEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/GameEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/competition/GoodBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/competition/GoodBot.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -50,24 +51,24 @@
     <session id="751671872">
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="8" />
+          <entry key="java" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="8" />
+          <entry key="JAVA" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="960" />
-          <entry key="txt" value="64" />
+          <entry key="java" value="998" />
+          <entry key="txt" value="75" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="960" />
-          <entry key="PLAIN_TEXT" value="64" />
+          <entry key="JAVA" value="998" />
+          <entry key="PLAIN_TEXT" value="75" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
@@ -82,11 +83,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
+            <state relative-caret-position="90">
+              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
             </state>
           </provider>
         </entry>
@@ -94,8 +95,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/GameEngine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="104" column="63" selection-start-line="104" selection-start-column="63" selection-end-line="104" selection-end-column="63" />
+            <state relative-caret-position="255">
+              <caret line="122" column="60" selection-start-line="122" selection-start-column="60" selection-end-line="122" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -106,8 +107,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/competition/GoodBot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="140" column="9" lean-forward="true" selection-start-line="140" selection-start-column="9" selection-end-line="140" selection-end-column="9" />
+            <state relative-caret-position="-900">
+              <caret line="141" lean-forward="true" selection-start-line="141" selection-end-line="141" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#10114#10115#0" expanded="true" />
@@ -117,13 +118,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/tests/com/company/competition/GoodBotTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="53" column="68" selection-start-line="53" selection-start-column="68" selection-end-line="53" selection-end-column="68" />
+            <state relative-caret-position="-465">
+              <caret line="5" column="26" lean-forward="true" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1948#1949#0" expanded="true" />
+                <element signature="e#2003#2004#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -224,10 +226,10 @@
         <option value="$PROJECT_DIR$/src/com/company/competition/Archive/ScoreKeeper.java" />
         <option value="$PROJECT_DIR$/src/com/company/competition/Archive/ScoringEngine.java" />
         <option value="$PROJECT_DIR$/src/com/company/competition/Archive/OkayPlayer.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/company/tests/com/company/competition/GoodBotTest.java" />
         <option value="$PROJECT_DIR$/src/com/company/GameEngine.java" />
         <option value="$PROJECT_DIR$/src/com/company/competition/GoodBot.java" />
-        <option value="$PROJECT_DIR$/src/com/company/tests/com/company/competition/GoodBotTest.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Main.java" />
       </list>
     </option>
   </component>
@@ -301,7 +303,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538596436410" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538596670549" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="true" />
@@ -496,7 +498,7 @@
       <workItem from="1538447260680" duration="135000" />
       <workItem from="1538503691788" duration="2801000" />
       <workItem from="1538581665964" duration="654000" />
-      <workItem from="1538593881406" duration="2457000" />
+      <workItem from="1538593881406" duration="2788000" />
     </task>
     <task id="LOCAL-00001" summary="added classes">
       <created>1537715798716</created>
@@ -624,25 +626,17 @@
       <option name="project" value="LOCAL" />
       <updated>1538527021143</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="added tests">
+      <created>1538596491942</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1538596491942</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="GoodBotTest - 2018.10.03 at 14h 47m 50s.xml">
-      <configuration name="GoodBotTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GoodBotTest - 2018.10.03 at 14h 48m 12s.xml">
-      <configuration name="GoodBotTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GoodBotTest - 2018.10.03 at 14h 49m 30s.xml">
-      <configuration name="GoodBotTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GoodBotTest - 2018.10.03 at 14h 49m 54s.xml">
-      <configuration name="GoodBotTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GoodBotTest - 2018.10.03 at 14h 50m 07s.xml">
-      <configuration name="GoodBotTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="GoodBotTest - 2018.10.03 at 14h 50m 33s.xml">
       <configuration name="GoodBotTest" configurationId="JUnit" />
     </history-entry>
@@ -658,9 +652,24 @@
     <history-entry file="GoodBotTest_giveCardsPlayed - 2018.10.03 at 14h 51m 40s.xml">
       <configuration name="GoodBotTest.giveCardsPlayed" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="GoodBotTest_giveCardsPlayed - 2018.10.03 at 14h 52m 23s.xml">
+      <configuration name="GoodBotTest.giveCardsPlayed" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GoodBotTest_containsNigiri - 2018.10.03 at 14h 52m 27s.xml">
+      <configuration name="GoodBotTest.containsNigiri" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GoodBotTest_containsNigiri - 2018.10.03 at 14h 52m 47s.xml">
+      <configuration name="GoodBotTest.containsNigiri" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GoodBotTest_getName - 2018.10.03 at 14h 53m 23s.xml">
+      <configuration name="GoodBotTest.getName" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GoodBotTest_getName - 2018.10.03 at 14h 53m 35s.xml">
+      <configuration name="GoodBotTest.getName" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49567000" />
+    <option name="totallyTimeSpent" value="49898000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="70" y="25" width="1850" height="1055" extended-state="6" />
@@ -720,7 +729,8 @@
     <MESSAGE value="why isn't the autograder running?" />
     <MESSAGE value="changed imports so autograder better run this time" />
     <MESSAGE value="added todo" />
-    <option name="LAST_COMMIT_MESSAGE" value="added todo" />
+    <MESSAGE value="added tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="added tests" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/company/ImageHelper.java">
@@ -731,13 +741,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/players/Card.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/company/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="58" selection-start-line="7" selection-start-column="58" selection-end-line="7" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/deck/Card.java" />
     <entry file="file://$PROJECT_DIR$/src/com/company/deck/CircularLinkedList.java" />
     <entry file="file://$PROJECT_DIR$/src/com/company/deck/Node.java" />
@@ -784,13 +787,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/deck/CardType.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/players/GUIPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -802,34 +798,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/GameEngine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="104" column="63" selection-start-line="104" selection-start-column="63" selection-end-line="104" selection-end-column="63" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/players/UberBot.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="16" column="50" lean-forward="true" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/competition/GoodBot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="140" column="9" lean-forward="true" selection-start-line="140" selection-start-column="9" selection-end-line="140" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#10114#10115#0" expanded="true" />
-            <element signature="e#10147#10148#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -848,13 +822,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/tests/com/company/competition/GoodBotTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="53" column="68" selection-start-line="53" selection-start-column="68" selection-end-line="53" selection-end-column="68" />
+        <state relative-caret-position="-465">
+          <caret line="5" column="26" lean-forward="true" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+          <folding>
+            <element signature="e#1948#1949#0" expanded="true" />
+            <element signature="e#2003#2004#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/GameEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="122" column="60" selection-start-line="122" selection-start-column="60" selection-end-line="122" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/competition/GoodBot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-900">
+          <caret line="141" lean-forward="true" selection-start-line="141" selection-end-line="141" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#10114#10115#0" expanded="true" />
+            <element signature="e#10147#10148#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>

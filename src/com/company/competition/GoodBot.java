@@ -139,8 +139,7 @@ public class GoodBot implements Player {
         if (cards == null || cards.entrySet().size() == 0) {
             return null;
         }
-        System.out.println(round);
-        System.out.println(currentTable.toString());
+
         // Check for 2-card combinations
         if (currentTable.contains(CardType.Chopsticks) && cards.entrySet().size() > 2) {
             CardType nigiri = containsNigiri(cards.values());
@@ -207,6 +206,7 @@ public class GoodBot implements Player {
      */
     public void endRound(Map<String, Integer> pointMap) {
         possibleCards = new ArrayList<>();
+        currentTable = new ArrayList<>();
         round = 0;
     }
 
